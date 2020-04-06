@@ -28,7 +28,7 @@ struct FeedListView: View {
   var state = FeedListState()
   
   var body: some View {
-    print("feeds: \(state.feeds)")
+    // print("feeds: \(state.feeds)")
     return List {
       ForEach(state.feeds) { feed in
         FeedCell(feed: feed)
