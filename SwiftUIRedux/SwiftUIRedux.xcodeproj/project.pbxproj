@@ -12,7 +12,6 @@
 		C3C9F6A0243B3B4B005ED324 /* SwiftUIRedux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C9F696243B3B4B005ED324 /* SwiftUIRedux.framework */; };
 		C3C9F6A5243B3B4B005ED324 /* SwiftUIReduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F6A4243B3B4B005ED324 /* SwiftUIReduxTests.swift */; };
 		C3C9F6A7243B3B4B005ED324 /* SwiftUIRedux.h in Headers */ = {isa = PBXBuildFile; fileRef = C3C9F699243B3B4B005ED324 /* SwiftUIRedux.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C3C9F70E243B3DBC005ED324 /* ElementDispatcherReloadAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F70A243B3DBC005ED324 /* ElementDispatcherReloadAction.swift */; };
 		C3C9F70F243B3DBC005ED324 /* ElementSubscriberProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F70B243B3DBC005ED324 /* ElementSubscriberProtocol.swift */; };
 		C3C9F710243B3DBC005ED324 /* ElementDispatcherAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F70C243B3DBC005ED324 /* ElementDispatcherAction.swift */; };
 		C3C9F711243B3DBC005ED324 /* ElementRootDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F70D243B3DBC005ED324 /* ElementRootDispatcher.swift */; };
@@ -79,7 +78,6 @@
 		C3C9F69F243B3B4B005ED324 /* SwiftUIReduxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIReduxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9F6A4243B3B4B005ED324 /* SwiftUIReduxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIReduxTests.swift; sourceTree = "<group>"; };
 		C3C9F6A6243B3B4B005ED324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3C9F70A243B3DBC005ED324 /* ElementDispatcherReloadAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementDispatcherReloadAction.swift; path = Dispatcher/ElementDispatcherReloadAction.swift; sourceTree = "<group>"; };
 		C3C9F70B243B3DBC005ED324 /* ElementSubscriberProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementSubscriberProtocol.swift; path = Dispatcher/ElementSubscriberProtocol.swift; sourceTree = "<group>"; };
 		C3C9F70C243B3DBC005ED324 /* ElementDispatcherAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementDispatcherAction.swift; path = Dispatcher/ElementDispatcherAction.swift; sourceTree = "<group>"; };
 		C3C9F70D243B3DBC005ED324 /* ElementRootDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementRootDispatcher.swift; path = Dispatcher/ElementRootDispatcher.swift; sourceTree = "<group>"; };
@@ -174,10 +172,9 @@
 		C3C9F709243B3DB0005ED324 /* Dispatcher */ = {
 			isa = PBXGroup;
 			children = (
-				C3C9F70C243B3DBC005ED324 /* ElementDispatcherAction.swift */,
-				C3C9F70A243B3DBC005ED324 /* ElementDispatcherReloadAction.swift */,
-				C3C9F70D243B3DBC005ED324 /* ElementRootDispatcher.swift */,
 				C3C9F70B243B3DBC005ED324 /* ElementSubscriberProtocol.swift */,
+				C3C9F70D243B3DBC005ED324 /* ElementRootDispatcher.swift */,
+				C3C9F70C243B3DBC005ED324 /* ElementDispatcherAction.swift */,
 			);
 			name = Dispatcher;
 			sourceTree = "<group>";
@@ -336,7 +333,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3C9F70F243B3DBC005ED324 /* ElementSubscriberProtocol.swift in Sources */,
-				C3C9F70E243B3DBC005ED324 /* ElementDispatcherReloadAction.swift in Sources */,
 				C3C9F710243B3DBC005ED324 /* ElementDispatcherAction.swift in Sources */,
 				C3C9F711243B3DBC005ED324 /* ElementRootDispatcher.swift in Sources */,
 			);
