@@ -2,7 +2,7 @@ import Foundation
 import CZUtils
 
 public class Feed: Identifiable, Codable, CustomStringConvertible {
-  static var mocks = (0..<5).map { Feed(Id: $0, title: "feed\($0)") }
+  static var mocks = (0..<10).map { Feed(Id: $0, title: "feed\($0)") }
   
   public var id = UUID()
   public var Id: Int

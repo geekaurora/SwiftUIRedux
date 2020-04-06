@@ -130,6 +130,16 @@
 			path = NotificationList;
 			sourceTree = "<group>";
 		};
+		C37B6007243B640400F69EC1 /* UI Layer */ = {
+			isa = PBXGroup;
+			children = (
+				C37B5FFC243B615B00F69EC1 /* FeedList */,
+				C37B5FFD243B616200F69EC1 /* NotificationList */,
+				C37B6005243B623D00F69EC1 /* TabsView.swift */,
+			);
+			path = "UI Layer";
+			sourceTree = "<group>";
+		};
 		C3C9F6B0243B3BF5005ED324 = {
 			isa = PBXGroup;
 			children = (
@@ -154,9 +164,7 @@
 		C3C9F6BB243B3BF5005ED324 /* SwiftUIReduxDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C37B5FFC243B615B00F69EC1 /* FeedList */,
-				C37B5FFD243B616200F69EC1 /* NotificationList */,
-				C37B6005243B623D00F69EC1 /* TabsView.swift */,
+				C37B6007243B640400F69EC1 /* UI Layer */,
 				C3C9F6F8243B3CF6005ED324 /* Resources */,
 				C3C9F6F7243B3CD8005ED324 /* Supported_Files */,
 				C3C9F6CA243B3BF8005ED324 /* Info.plist */,

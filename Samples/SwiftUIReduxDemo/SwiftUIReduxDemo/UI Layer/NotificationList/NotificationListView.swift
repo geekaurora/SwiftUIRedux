@@ -8,7 +8,7 @@ struct NotificationCell: View {
   
   var body: some View {
     VStack(alignment: .leading) {
-      Text("<\(notification.title)>")
+      Text("\(notification.title)")
       
       HStack {
         Text(notification.feed.title)
