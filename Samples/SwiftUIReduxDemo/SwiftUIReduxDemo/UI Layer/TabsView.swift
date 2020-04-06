@@ -19,6 +19,5 @@ struct TabsView: View {
           Text("Notifications")
       }
     }
-    //.font(.headline)
   }
 }
