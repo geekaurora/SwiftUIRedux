@@ -17,9 +17,6 @@ struct FeedCell: View {
         print("tapped like.")
         dispatch(action: FeedLikeAction(feed: self.feed))
       }) {
-        if !feed.isLiked {
-          
-        }
         Text(feed.isLiked ? "UnLike" : "Like")
       }
     }
@@ -41,15 +38,25 @@ class FeedListState: NSObject, ObservableObject, SubscriberProtocol {
       let oldFeeds = feeds
       self.feeds = []
       // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
-      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-        self.feeds = oldFeeds.map { feed in
-          //            if feed.id == action.feed.id {
-          //              feed.isLiked = !feed.isLiked
-          //            }
-          feed.isLiked = true
-          return feed
+      self.feeds = oldFeeds.map { feed in
+        feed.id = UUID()
+        if feed.id == action.feed.id {
+          feed.isLiked = !feed.isLiked
         }
+        return feed
       }
+      
+//
+//      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//        self.feeds = oldFeeds.map { feed in
+//          feed.id = UUID()
+//                      if feed.id == action.feed.id {
+//                        feed.isLiked = !feed.isLiked
+//                      }
+//          feed.isLiked = true
+//          return feed
+//        }
+//      }
     default:
       break
     }

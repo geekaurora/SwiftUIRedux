@@ -2,9 +2,9 @@ import Foundation
 import CZUtils
 
 public class Feed: Identifiable, Codable, CustomStringConvertible {
-  static let mocks = (0..<5).map { Feed(title: "Feed\($0)") }
+  static let mocks = (0..<1).map { Feed(title: "Feed\($0)") }
   
-  public let id = UUID()
+  public var id = UUID()
   public let title: String
   public var isLiked: Bool
   
