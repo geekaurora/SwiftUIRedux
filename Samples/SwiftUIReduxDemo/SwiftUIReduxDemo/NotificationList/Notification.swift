@@ -3,7 +3,7 @@ import CZUtils
 
 public class Notification: Identifiable, Codable, CustomStringConvertible {
   static var mocks = (0..<5).map {
-    Notification(Id: $0, title: "Notification\($0)", feed: Feed(Id: $0, title: "Feed\($0)"))
+    Notification(Id: $0, title: "notification\($0)", feed: Feed(Id: $0, title: "feed\($0)"))
   }
 
   public var id = UUID()

@@ -7,14 +7,18 @@ struct NotificationCell: View {
   let notification: Notification
   
   var body: some View {
-    HStack {
-      Text(notification.feed.title)
-      Spacer()
-      Button(action: {
-        print("tapped like.")
-        dispatch(action: FeedLikeAction(feed: self.notification.feed))
-      }) {
-        Text(notification.feed.isLiked ? "UnLike" : "Like")
+    VStack(alignment: .leading) {
+      Text("<\(notification.title)>")
+      
+      HStack {
+        Text(notification.feed.title)
+        Spacer()
+        Button(action: {
+          print("tapped like.")
+          dispatch(action: FeedLikeAction(feed: self.notification.feed))
+        }) {
+          Text(notification.feed.isLiked ? "UnLike" : "Like")
+        }
       }
     }
   }

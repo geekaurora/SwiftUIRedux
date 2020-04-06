@@ -10,13 +10,13 @@ struct TabsView: View {
       FeedListView()
         .tabItem {
           Image(systemName: "house")
-          Text("Home")
+          Text("Feeds")
       }
       
       NotificationListView()
         .tabItem {
-          Image(systemName: "magnifyingglass")
-          Text("Explore")
+          Image(systemName: "message")
+          Text("Notifications")
       }
     }
     .font(.headline)
