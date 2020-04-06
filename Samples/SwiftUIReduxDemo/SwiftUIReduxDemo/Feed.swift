@@ -1,13 +1,9 @@
 import Foundation
 import CZUtils
 
-public class FeedMock: Identifiable, Codable, CustomStringConvertible {
-  static func generateFeeds() -> [Feed] {
-    return (0..<5).map { Feed(Id: $0, title: "Feed\($0)") }
-  }
-}
-  
 public class Feed: Identifiable, Codable, CustomStringConvertible {
+  static var mocks = (0..<5).map { Feed(Id: $0, title: "Feed\($0)") }
+  
   public var id = UUID()
   public var Id: Int
   public let title: String
