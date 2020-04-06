@@ -16,17 +16,4 @@ public class Feed: Identifiable, Codable, CustomStringConvertible {
     self.title = title
     self.isLiked = isLiked
   }
-  
-//  public func hash(into hasher: inout Hasher) {
-//    hasher.combine(id)
-//    hasher.combine(title)
-//    hasher.combine(isLiked)
-//  }
-//
-//  public static func == (lhs: Feed, rhs: Feed) -> Bool {
-//    return lhs.id == rhs.id &&
-//      lhs.title == rhs.title &&
-//      lhs.isLiked == rhs.isLiked
-//  }
-//
 }

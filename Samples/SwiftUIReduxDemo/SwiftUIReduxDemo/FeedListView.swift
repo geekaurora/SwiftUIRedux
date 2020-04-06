@@ -34,29 +34,14 @@ class FeedListState: NSObject, ObservableObject, SubscriberProtocol {
   
   public func reduce(action: DispatcherActionProtocol) {
     switch action {
-    case let action as FeedLikeAction:
-      let oldFeeds = feeds
-      //self.feeds = []
-      
+    case let action as FeedLikeAction:      
       // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
-      self.feeds = oldFeeds.map { feed in
-        //feed.id = UUID()
+      self.feeds = feeds.map { feed in
         if feed.id == action.feed.id {
           feed.isLiked = !feed.isLiked
         }
         return feed
       }
-      
-      //      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-      //        self.feeds = oldFeeds.map { feed in
-      //          //feed.id = UUID()
-      //          if feed.id == action.feed.id {
-      //            feed.isLiked = !feed.isLiked
-      //          }
-      //          //feed.isLiked = true
-      //          return feed
-      //        }
-    //      }
     default:
       break
     }
