@@ -17,6 +17,9 @@ struct FeedCell: View {
         print("tapped like.")
         dispatch(action: FeedLikeAction(feed: self.feed))
       }) {
+        if !feed.isLiked {
+          
+        }
         Text(feed.isLiked ? "UnLike" : "Like")
       }
     }
