@@ -1,10 +1,7 @@
 import Foundation
 import CZUtils
 
-public class Feed: Codable, CustomStringConvertible
-, Hashable
-{
-
+public class Feed: Codable, CustomStringConvertible, Hashable {
   static let mocks = (0..<1).map { Feed(id: $0, title: "Feed\($0)") }
   
   public var id: Int
@@ -18,15 +15,15 @@ public class Feed: Codable, CustomStringConvertible
   }
   
   public func hash(into hasher: inout Hasher) {
-      hasher.combine(id)
-      hasher.combine(title)
-      hasher.combine(isLiked)
+    hasher.combine(id)
+    hasher.combine(title)
+    hasher.combine(isLiked)
   }
   
   public static func == (lhs: Feed, rhs: Feed) -> Bool {
     return lhs.id == rhs.id &&
       lhs.title == rhs.title &&
-    lhs.isLiked == rhs.isLiked
+      lhs.isLiked == rhs.isLiked
   }
-    
+  
 }

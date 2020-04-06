@@ -36,7 +36,7 @@ class FeedListState: NSObject, ObservableObject, SubscriberProtocol {
     switch action {
     case let action as FeedLikeAction:
       let oldFeeds = feeds
-      self.feeds = []
+      //self.feeds = []
       // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
       self.feeds = oldFeeds.map { feed in
         //feed.id = UUID()
@@ -70,7 +70,7 @@ struct FeedListView: View {
   
   var body: some View {
     print("feeds: \(state.feeds)")
-    return VStack {
+    return List {
       ForEach(state.feeds, id: \.self) { feed in
         FeedCell(feed: feed)
       }
