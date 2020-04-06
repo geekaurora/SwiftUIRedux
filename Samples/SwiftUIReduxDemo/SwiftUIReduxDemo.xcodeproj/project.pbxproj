@@ -122,11 +122,9 @@
 		C3C9F6BB243B3BF5005ED324 /* SwiftUIReduxDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C3C9F6BC243B3BF5005ED324 /* AppDelegate.swift */,
-				C3C9F6BE243B3BF6005ED324 /* SceneDelegate.swift */,
 				C3C9F6C0243B3BF6005ED324 /* ContentView.swift */,
-				C3C9F6C2243B3BF8005ED324 /* Assets.xcassets */,
-				C3C9F6C7243B3BF8005ED324 /* LaunchScreen.storyboard */,
+				C3C9F6F8243B3CF6005ED324 /* Resources */,
+				C3C9F6F7243B3CD8005ED324 /* Supported_Files */,
 				C3C9F6CA243B3BF8005ED324 /* Info.plist */,
 				C3C9F6C4243B3BF8005ED324 /* Preview Content */,
 			);
@@ -166,6 +164,24 @@
 				C3C9F6F4243B3C35005ED324 /* SwiftUIReduxTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C3C9F6F7243B3CD8005ED324 /* Supported_Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3C9F6C7243B3BF8005ED324 /* LaunchScreen.storyboard */,
+				C3C9F6BC243B3BF5005ED324 /* AppDelegate.swift */,
+				C3C9F6BE243B3BF6005ED324 /* SceneDelegate.swift */,
+			);
+			path = Supported_Files;
+			sourceTree = "<group>";
+		};
+		C3C9F6F8243B3CF6005ED324 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3C9F6C2243B3BF8005ED324 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
