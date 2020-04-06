@@ -2,16 +2,31 @@ import Foundation
 import CZUtils
 
 public class Feed: Codable, CustomStringConvertible
-//, Identifiable
+, Hashable
 {
-  static let mocks = (0..<1).map { Feed(title: "Feed\($0)") }
+
+  static let mocks = (0..<1).map { Feed(id: $0, title: "Feed\($0)") }
   
-  public var id = UUID()
+  public var id: Int
   public let title: String
   public var isLiked: Bool
   
-  public init(title: String, isLiked: Bool = false) {
+  public init(id: Int, title: String, isLiked: Bool = false) {
+    self.id = id
     self.title = title
     self.isLiked = isLiked
   }
+  
+  public func hash(into hasher: inout Hasher) {
+      hasher.combine(id)
+      hasher.combine(title)
+      hasher.combine(isLiked)
+  }
+  
+  public static func == (lhs: Feed, rhs: Feed) -> Bool {
+    return lhs.id == rhs.id &&
+      lhs.title == rhs.title &&
+    lhs.isLiked == rhs.isLiked
+  }
+    
 }

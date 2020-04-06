@@ -71,7 +71,7 @@ struct FeedListView: View {
   var body: some View {
     print("feeds: \(state.feeds)")
     return VStack {
-      ForEach(state.feeds) { feed in
+      ForEach(state.feeds, id: \.self) { feed in
         FeedCell(feed: feed)
       }
     }
