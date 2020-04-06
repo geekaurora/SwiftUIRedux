@@ -24,7 +24,7 @@ struct FeedCell: View {
 }
 
 class FeedListState: NSObject, ObservableObject, SubscriberProtocol {
-  @Published var feeds: [Feed] = Feed.mocks
+  @Published var feeds: [Feed] = FeedMock.generateFeeds()
   
   public override init() {
     super.init()
