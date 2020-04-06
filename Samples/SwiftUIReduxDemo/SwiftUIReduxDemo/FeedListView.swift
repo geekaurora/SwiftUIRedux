@@ -2,11 +2,6 @@ import SwiftUI
 import SwiftUIRedux
 import CZUtils
 
-/// Convenience method to dispatch `action` to subscribers of `RootDispatcher.shared`.
-public func dispatch(action: DispatcherActionProtocol) {
-  RootDispatcher.shared.dispatch(action: action)
-}
-
 struct FeedLikeAction: DispatcherActionProtocol {
   let feed: Feed
 }
@@ -45,9 +40,10 @@ class FeedListState: NSObject, ObservableObject, SubscriberProtocol {
         // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
           self.feeds = oldFeeds.map { feed in
-            if feed.id == action.feed.id {
-              feed.isLiked = !feed.isLiked
-            }
+//            if feed.id == action.feed.id {
+//              feed.isLiked = !feed.isLiked
+//            }
+            feed.isLiked = true
             return feed
           }
         }

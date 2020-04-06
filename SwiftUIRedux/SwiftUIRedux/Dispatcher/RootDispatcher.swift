@@ -6,6 +6,11 @@ import SwiftUIKit
 
 public typealias SubscriberObject = NSObject & SubscriberProtocol
 
+/// Convenience method to dispatch `action` to subscribers of `RootDispatcher.shared`.
+public func dispatch(action: DispatcherActionProtocol) {
+  RootDispatcher.shared.dispatch(action: action)
+}
+
 /// Root dispatcher of the app, responsible to notify SubDispatchers - tabs.
 ///
 /// - Note:
