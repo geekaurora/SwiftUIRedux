@@ -36,28 +36,27 @@ class FeedListState: NSObject, ObservableObject, SubscriberProtocol {
     switch action {
     case let action as FeedLikeAction:
       let oldFeeds = feeds
-      self.feeds = []
+      //self.feeds = []
       
       // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
-      //      self.feeds = oldFeeds.map { feed in
-      //        //feed.id = UUID()
-      //        if feed.id == action.feed.id {
-      //          feed.isLiked = !feed.isLiked
-      //        }
-      //        return feed
-      //      }
-      
-      
-      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-        self.feeds = oldFeeds.map { feed in
-          //feed.id = UUID()
-          if feed.id == action.feed.id {
-            feed.isLiked = !feed.isLiked
-          }
-          feed.isLiked = true
-          return feed
+      self.feeds = oldFeeds.map { feed in
+        //feed.id = UUID()
+        if feed.id == action.feed.id {
+          feed.isLiked = !feed.isLiked
         }
+        return feed
       }
+      
+      //      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+      //        self.feeds = oldFeeds.map { feed in
+      //          //feed.id = UUID()
+      //          if feed.id == action.feed.id {
+      //            feed.isLiked = !feed.isLiked
+      //          }
+      //          //feed.isLiked = true
+      //          return feed
+      //        }
+    //      }
     default:
       break
     }
@@ -72,7 +71,7 @@ struct FeedListView: View {
   var body: some View {
     print("feeds: \(state.feeds)")
     return List {
-      ForEach(state.feeds, id: \.self) { feed in
+      ForEach(state.feeds) { feed in
         FeedCell(feed: feed)
       }
     }
