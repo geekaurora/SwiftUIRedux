@@ -13,6 +13,12 @@
 		C37B5FFF243B617D00F69EC1 /* NotificationListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37B5FFE243B617D00F69EC1 /* NotificationListState.swift */; };
 		C37B6001243B619600F69EC1 /* FeedListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37B6000243B619600F69EC1 /* FeedListState.swift */; };
 		C37B6006243B623D00F69EC1 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37B6005243B623D00F69EC1 /* TabsView.swift */; };
+		C37B600E243B64DD00F69EC1 /* CZUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37B600D243B64DD00F69EC1 /* CZUtils.framework */; };
+		C37B600F243B64DD00F69EC1 /* CZUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C37B600D243B64DD00F69EC1 /* CZUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C37B6012243B64DF00F69EC1 /* SwiftUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37B6011243B64DF00F69EC1 /* SwiftUIKit.framework */; };
+		C37B6013243B64DF00F69EC1 /* SwiftUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C37B6011243B64DF00F69EC1 /* SwiftUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C37B6014243B64E200F69EC1 /* SwiftUIRedux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C9F6F2243B3C35005ED324 /* SwiftUIRedux.framework */; };
+		C37B6015243B64E200F69EC1 /* SwiftUIRedux.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3C9F6F2243B3C35005ED324 /* SwiftUIRedux.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C3C9F6BD243B3BF5005ED324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F6BC243B3BF5005ED324 /* AppDelegate.swift */; };
 		C3C9F6BF243B3BF6005ED324 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F6BE243B3BF6005ED324 /* SceneDelegate.swift */; };
 		C3C9F6C1243B3BF6005ED324 /* FeedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F6C0243B3BF6005ED324 /* FeedListView.swift */; };
@@ -61,6 +67,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C37B6010243B64DD00F69EC1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C37B600F243B64DD00F69EC1 /* CZUtils.framework in Embed Frameworks */,
+				C37B6013243B64DF00F69EC1 /* SwiftUIKit.framework in Embed Frameworks */,
+				C37B6015243B64E200F69EC1 /* SwiftUIRedux.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C37B5FF3243B511500F69EC1 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		C37B5FF6243B5F1900F69EC1 /* NotificationListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListView.swift; sourceTree = "<group>"; };
@@ -68,6 +90,8 @@
 		C37B5FFE243B617D00F69EC1 /* NotificationListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListState.swift; sourceTree = "<group>"; };
 		C37B6000243B619600F69EC1 /* FeedListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListState.swift; sourceTree = "<group>"; };
 		C37B6005243B623D00F69EC1 /* TabsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		C37B600D243B64DD00F69EC1 /* CZUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CZUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37B6011243B64DF00F69EC1 /* SwiftUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9F6B9243B3BF5005ED324 /* SwiftUIReduxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIReduxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9F6BC243B3BF5005ED324 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3C9F6BE243B3BF6005ED324 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +114,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C37B600E243B64DD00F69EC1 /* CZUtils.framework in Frameworks */,
+				C37B6012243B64DF00F69EC1 /* SwiftUIKit.framework in Frameworks */,
+				C37B6014243B64E200F69EC1 /* SwiftUIRedux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +167,15 @@
 			path = "UI Layer";
 			sourceTree = "<group>";
 		};
+		C37B600C243B64DD00F69EC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C37B6011243B64DF00F69EC1 /* SwiftUIKit.framework */,
+				C37B600D243B64DD00F69EC1 /* CZUtils.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C3C9F6B0243B3BF5005ED324 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +184,7 @@
 				C3C9F6D2243B3BF8005ED324 /* SwiftUIReduxDemoTests */,
 				C3C9F6DD243B3BF8005ED324 /* SwiftUIReduxDemoUITests */,
 				C3C9F6BA243B3BF5005ED324 /* Products */,
+				C37B600C243B64DD00F69EC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -236,6 +273,7 @@
 				C3C9F6B5243B3BF5005ED324 /* Sources */,
 				C3C9F6B6243B3BF5005ED324 /* Frameworks */,
 				C3C9F6B7243B3BF5005ED324 /* Resources */,
+				C37B6010243B64DD00F69EC1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
