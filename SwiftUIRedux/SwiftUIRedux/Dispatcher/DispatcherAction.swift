@@ -3,8 +3,8 @@ import SwiftUI
 import Combine
 
 /// Framework Action - Different from User Action.
-public protocol DispatcherAction {}
+public protocol DispatcherActionProtocol {}
 
-public class DispatcherReloadAction: DispatcherAction {
+public class DispatcherReloadAction: DispatcherActionProtocol {
   public init() {}
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C37B5FF4243B511500F69EC1 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37B5FF3243B511500F69EC1 /* Feed.swift */; };
 		C3C9F6BD243B3BF5005ED324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F6BC243B3BF5005ED324 /* AppDelegate.swift */; };
 		C3C9F6BF243B3BF6005ED324 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F6BE243B3BF6005ED324 /* SceneDelegate.swift */; };
 		C3C9F6C1243B3BF6005ED324 /* FeedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F6C0243B3BF6005ED324 /* FeedListView.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C37B5FF3243B511500F69EC1 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		C3C9F6B9243B3BF5005ED324 /* SwiftUIReduxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIReduxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9F6BC243B3BF5005ED324 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3C9F6BE243B3BF6005ED324 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		C3C9F6BB243B3BF5005ED324 /* SwiftUIReduxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C37B5FF3243B511500F69EC1 /* Feed.swift */,
 				C3C9F6C0243B3BF6005ED324 /* FeedListView.swift */,
 				C3C9F6F8243B3CF6005ED324 /* Resources */,
 				C3C9F6F7243B3CD8005ED324 /* Supported_Files */,
@@ -340,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3C9F6BD243B3BF5005ED324 /* AppDelegate.swift in Sources */,
+				C37B5FF4243B511500F69EC1 /* Feed.swift in Sources */,
 				C3C9F6BF243B3BF6005ED324 /* SceneDelegate.swift in Sources */,
 				C3C9F6C1243B3BF6005ED324 /* FeedListView.swift in Sources */,
 			);

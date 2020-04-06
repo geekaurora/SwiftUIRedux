@@ -16,7 +16,7 @@ public class RootDispatcher {
 
   private var subscribers = NSHashTable<AnyObject>.weakObjects()
 
-  public func dispatch(action: DispatcherAction = DispatcherReloadAction()) {
+  public func dispatch(action: DispatcherActionProtocol = DispatcherReloadAction()) {
     // Notify all subscribers. Note that subscribers can filter action and choose whether to respond.
     subscribers.allObjects
       .compactMap { ($0 as? SubscriberObject).assertIfNil }
