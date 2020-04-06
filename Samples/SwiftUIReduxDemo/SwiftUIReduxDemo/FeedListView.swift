@@ -21,7 +21,7 @@ struct FeedListView: View {
   var body: some View {
     
     List {
-      ForEach(0..<10) { id in
+      ForEach(0..<20) { id in
         FeedCell()
       }
     }
