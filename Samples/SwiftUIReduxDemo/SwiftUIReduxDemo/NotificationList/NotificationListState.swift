@@ -7,7 +7,8 @@ class NotificationListState: NSObject, ObservableObject, SubscriberProtocol {
   
   public override init() {
     super.init()
-    // Subscribe to the root dispatcher.
+    
+    // Subscribe to root Dispatcher.
     RootDispatcher.shared.addSubscriber(self)
   }
   

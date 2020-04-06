@@ -111,9 +111,9 @@
 		C37B5FFC243B615B00F69EC1 /* FeedList */ = {
 			isa = PBXGroup;
 			children = (
+				C37B5FF3243B511500F69EC1 /* Feed.swift */,
 				C3C9F6C0243B3BF6005ED324 /* FeedListView.swift */,
 				C37B6000243B619600F69EC1 /* FeedListState.swift */,
-				C37B5FF3243B511500F69EC1 /* Feed.swift */,
 			);
 			path = FeedList;
 			sourceTree = "<group>";
@@ -121,9 +121,9 @@
 		C37B5FFD243B616200F69EC1 /* NotificationList */ = {
 			isa = PBXGroup;
 			children = (
+				C37B5FFA243B5FA800F69EC1 /* Notification.swift */,
 				C37B5FF6243B5F1900F69EC1 /* NotificationListView.swift */,
 				C37B5FFE243B617D00F69EC1 /* NotificationListState.swift */,
-				C37B5FFA243B5FA800F69EC1 /* Notification.swift */,
 			);
 			path = NotificationList;
 			sourceTree = "<group>";
