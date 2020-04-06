@@ -2,7 +2,7 @@ import Foundation
 import CZUtils
 
 public class Feed: Codable, CustomStringConvertible, Hashable {
-  static let mocks = (0..<1).map { Feed(id: $0, title: "Feed\($0)") }
+  static let mocks = (0..<5).map { Feed(id: $0, title: "Feed\($0)") }
   
   public var id: Int
   public let title: String
