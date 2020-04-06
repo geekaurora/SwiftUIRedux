@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftUIKit
 import SwiftUIRedux
 import CZUtils
 
@@ -8,7 +9,6 @@ struct FeedLikeAction: DispatcherActionProtocol {
 
 struct FeedCell: View {
   let feed: Feed
-  
   var body: some View {
     HStack {
       Text(feed.title)
@@ -34,19 +34,19 @@ class FeedListState: NSObject, ObservableObject, SubscriberProtocol {
   
   public func reduce(action: DispatcherActionProtocol) {
     switch action {
-      case let action as FeedLikeAction:
-        let oldFeeds = feeds
-        self.feeds = []
-        // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-          self.feeds = oldFeeds.map { feed in
-//            if feed.id == action.feed.id {
-//              feed.isLiked = !feed.isLiked
-//            }
-            feed.isLiked = true
-            return feed
-          }
+    case let action as FeedLikeAction:
+      let oldFeeds = feeds
+      self.feeds = []
+      // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
+      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        self.feeds = oldFeeds.map { feed in
+          //            if feed.id == action.feed.id {
+          //              feed.isLiked = !feed.isLiked
+          //            }
+          feed.isLiked = true
+          return feed
         }
+      }
     default:
       break
     }
@@ -58,12 +58,14 @@ struct FeedListView: View {
   @ObservedObject
   var state = FeedListState()
   
-  var body: some View {    
-    List {
+  var body: some View {
+    print("feeds: \(state.feeds)")
+    return List {
       ForEach(state.feeds) { feed in
         FeedCell(feed: feed)
       }
     }
+    
   }
 }
 
