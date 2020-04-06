@@ -43,14 +43,14 @@ class FeedListState: NSObject, ObservableObject, SubscriberProtocol {
         let oldFeeds = feeds
         self.feeds = []
         // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
-//        CZMainQueueScheduler.async {
-//          self.feeds = oldFeeds.map { feed in
-//            if feed.id == action.feed.id {
-//              feed.isLiked = !feed.isLiked
-//            }
-//            return feed
-//          }
-//        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+          self.feeds = oldFeeds.map { feed in
+            if feed.id == action.feed.id {
+              feed.isLiked = !feed.isLiked
+            }
+            return feed
+          }
+        }
     default:
       break
     }
