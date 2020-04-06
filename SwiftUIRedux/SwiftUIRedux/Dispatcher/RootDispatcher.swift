@@ -4,35 +4,35 @@ import Combine
 import CZUtils
 import SwiftUIKit
 
-public typealias ElementSubscriberObject = NSObject & ElementSubscriberProtocol
+public typealias SubscriberObject = NSObject & SubscriberProtocol
 
 /// Root dispatcher of the app, responsible to notify SubDispatchers - tabs.
 ///
 /// - Note:
 /// Dispatcher only holds weak reference to subscribers, no need to explicitly call `removeSubscriber()` when deinit.
-public class ElementRootDispatcher {
+public class RootDispatcher {
 
-  public static var shared = ElementRootDispatcher()
+  public static var shared = RootDispatcher()
 
   private var subscribers = NSHashTable<AnyObject>.weakObjects()
 
-  public func dispatch(action: ElementDispatcherAction = ElementDispatcherReloadAction()) {
+  public func dispatch(action: DispatcherAction = DispatcherReloadAction()) {
     // Notify all subscribers. Note that subscribers can filter action and choose whether to respond.
     subscribers.allObjects
-      .compactMap { ($0 as? ElementSubscriberObject).assertIfNil }
+      .compactMap { ($0 as? SubscriberObject).assertIfNil }
       .forEach { $0.reduce(action: action) }
   }
 
-  public func addSubscriber(_ subscriber: ElementSubscriberObject) {
+  public func addSubscriber(_ subscriber: SubscriberObject) {
     guard !containsSubscriber(subscriber) else { return }
     subscribers.add(subscriber)
   }
 
-  public func removeSubscriber(_ subscriber: ElementSubscriberObject) {
+  public func removeSubscriber(_ subscriber: SubscriberObject) {
     subscribers.remove(subscriber)
   }
 
-  public func containsSubscriber(_ subscriber: ElementSubscriberObject) -> Bool {
+  public func containsSubscriber(_ subscriber: SubscriberObject) -> Bool {
     return subscribers.contains(subscriber)
   }
 

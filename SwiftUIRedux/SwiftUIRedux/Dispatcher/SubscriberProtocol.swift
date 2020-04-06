@@ -3,9 +3,9 @@ import SwiftUI
 import Combine
 
 /// Protocol of Subscriber.
-public protocol ElementSubscriberProtocol: NSObjectProtocol {
+public protocol SubscriberProtocol: NSObjectProtocol {
 
   /// React to the `action`. Note that subscribers can filter action and choose whether to respond.
-  func reduce(action: ElementDispatcherAction)
+  func reduce(action: DispatcherAction)
   
 }
