@@ -6,7 +6,7 @@ class NotificationListState: Subscriber, ObservableObject {
   
   @Published var notifications: [Notification] = Notification.mocks
   
-  public override func reduce(action: DispatcherActionProtocol) {
+  public override func reduce(action: ReduxActionProtocol) {
     switch action {
     case let action as FeedLikeAction:
       // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.

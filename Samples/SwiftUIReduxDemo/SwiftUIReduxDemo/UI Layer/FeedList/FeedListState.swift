@@ -6,7 +6,7 @@ public class FeedListState: Subscriber, ObservableObject {
   
   @Published var feeds: [Feed] = Feed.mocks
   
-  public override func reduce(action: DispatcherActionProtocol) {
+  public override func reduce(action: ReduxActionProtocol) {
     switch action {
     case let action as FeedLikeAction:
       // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.

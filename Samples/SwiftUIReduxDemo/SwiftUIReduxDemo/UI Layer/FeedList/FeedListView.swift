@@ -3,7 +3,7 @@ import SwiftUIKit
 import SwiftUIRedux
 import CZUtils
 
-struct FeedLikeAction: DispatcherActionProtocol {
+struct FeedLikeAction: ReduxActionProtocol {
   let feed: Feed
 }
 
@@ -18,7 +18,7 @@ struct FeedCell: View {
       
       Button(action: {
         print("tapped like.")
-        dispatch(action: FeedLikeAction(feed: self.feed))        
+        dispatch(action: FeedLikeAction(feed: self.feed))
       }) {
         Text(feed.isLiked ? "UnLike" : "Like")
       }.modifier(NormalButtonStyle())

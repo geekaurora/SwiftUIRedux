@@ -1,8 +1,8 @@
 import SwiftUIKit
 
-/// Protocol of Redux Action - Different from User Action.
-public protocol DispatcherActionProtocol {}
+/// Protocol of Redux Action - different from User Action.
+public protocol ReduxActionProtocol {}
 
-public class DispatcherReloadAction: DispatcherActionProtocol {
+public class ReduxReloadAction: ReduxActionProtocol {
   public init() {}
 }
