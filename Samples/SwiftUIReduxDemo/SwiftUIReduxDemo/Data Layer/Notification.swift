@@ -1,4 +1,4 @@
-import Foundation
+import SwiftUIRedux
 import CZUtils
 
 public class Notification: Identifiable, Codable, CustomStringConvertible {
@@ -15,3 +15,10 @@ public class Notification: Identifiable, Codable, CustomStringConvertible {
     self.feed = feed
   }
 }
+
+extension Notification: ReduxStateProtocol {
+  public func reduce(action: ReduxActionProtocol) {
+    feed.reduce(action: action)
+  }
+}
+

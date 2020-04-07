@@ -20,53 +20,5 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "262BC03D-7F50-4797-8C94-F91F0A9577F0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftUIReduxDemo/UI Layer/FeedList/FeedListState.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "reduce(action:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "262BC03D-7F50-4797-8C94-F91F0A9577F0 - ce7923f680d34781"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftUIReduxDemo.FeedListState.reduce(action: SwiftUIRedux.ReduxActionProtocol) -&gt; ()"
-                  moduleName = "SwiftUIReduxDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/__Github/SwiftUIRedux/Samples/SwiftUIReduxDemo/SwiftUIReduxDemo/UI%20Layer/FeedList/FeedListState.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "429">
-               </Location>
-               <Location
-                  uuid = "262BC03D-7F50-4797-8C94-F91F0A9577F0 - b9c14e827c6b813f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (SwiftUIReduxDemo.Feed) -&gt; SwiftUIReduxDemo.Feed in SwiftUIReduxDemo.FeedListState.reduce(action: SwiftUIRedux.ReduxActionProtocol) -&gt; ()"
-                  moduleName = "SwiftUIReduxDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/__Github/SwiftUIRedux/Samples/SwiftUIReduxDemo/SwiftUIReduxDemo/UI%20Layer/FeedList/FeedListState.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "84">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
