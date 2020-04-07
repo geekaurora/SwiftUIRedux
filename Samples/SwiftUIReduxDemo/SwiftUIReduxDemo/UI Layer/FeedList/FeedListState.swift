@@ -20,5 +20,4 @@ public class FeedListState: Subscriber, ObservableObject {
       break
     }
   }
-  
 }
