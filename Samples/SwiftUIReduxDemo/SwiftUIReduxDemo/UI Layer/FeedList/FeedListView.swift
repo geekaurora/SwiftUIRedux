@@ -12,17 +12,16 @@ struct FeedCell: View {
   var body: some View {
     HStack {
       Text(feed.title)
-        .modifier(HeadlineTextStyle())
+        .modifier(ContentTextStyle())
       
       Spacer()
       
       Button(action: {
         print("tapped like.")
-        dispatch(action: FeedLikeAction(feed: self.feed))
+        dispatch(action: FeedLikeAction(feed: self.feed))        
       }) {
         Text(feed.isLiked ? "UnLike" : "Like")
-      }
-      .modifier(NormalButtonStyle())
+      }.modifier(NormalButtonStyle())
     }
   }
 }
