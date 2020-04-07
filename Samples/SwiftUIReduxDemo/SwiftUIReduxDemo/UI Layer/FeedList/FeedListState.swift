@@ -8,9 +8,9 @@ public class FeedListState: Subscriber, ObservableObject {
   
   @discardableResult
   public override func reduce(action: ReduxActionProtocol) -> Self {
-    let oldFeeds = feeds.map { $0.codableCopy() }
     let newFeeds = feeds.map { $0.reduce(action: action) }
-    if newFeeds != oldFeeds {
+    // Only reload UI if new `feeds` differs from existing `feeds`.
+    if newFeeds != feeds {
       self.feeds = newFeeds
     }
     return self
