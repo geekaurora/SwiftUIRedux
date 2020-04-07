@@ -11,6 +11,7 @@ open class Subscriber: NSObject, SubscriberProtocol {
   
   public override init() {
     super.init()
+    
     // Subscribes to the root store, and it will unsubscribe itself automatically when deinit.
     RootStore.shared.addSubscriber(self)
   }
