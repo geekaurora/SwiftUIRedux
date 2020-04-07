@@ -104,11 +104,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C397F692243C899C003DF1CE /* New Group */ = {
+		C397F692243C899C003DF1CE /* Supported_Files */ = {
 			isa = PBXGroup;
 			children = (
+				C3C9F699243B3B4B005ED324 /* SwiftUIRedux.h */,
+				C3C9F69A243B3B4B005ED324 /* Info.plist */,
 			);
-			path = "New Group";
+			path = Supported_Files;
 			sourceTree = "<group>";
 		};
 		C3A199D1243B3F76000C64D2 /* Products */ = {
@@ -160,12 +162,10 @@
 		C3C9F698243B3B4B005ED324 /* SwiftUIRedux */ = {
 			isa = PBXGroup;
 			children = (
-				C397F692243C899C003DF1CE /* New Group */,
 				C3C9F70D243B3DBC005ED324 /* RootStore.swift */,
 				C3C9F70B243B3DBC005ED324 /* Subscriber.swift */,
 				C3C9F70C243B3DBC005ED324 /* Action.swift */,
-				C3C9F699243B3B4B005ED324 /* SwiftUIRedux.h */,
-				C3C9F69A243B3B4B005ED324 /* Info.plist */,
+				C397F692243C899C003DF1CE /* Supported_Files */,
 			);
 			path = SwiftUIRedux;
 			sourceTree = "<group>";
@@ -497,7 +497,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftUIRedux/Info.plist;
+				INFOPLIST_FILE = SwiftUIRedux/Supported_Files/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -524,7 +524,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftUIRedux/Info.plist;
+				INFOPLIST_FILE = SwiftUIRedux/Supported_Files/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
