@@ -1,7 +1,7 @@
 import SwiftUIRedux
 import CZUtils
 
-public class Feed: Identifiable, Codable, Equatable, CustomStringConvertible {
+public struct Feed: Identifiable, Codable, Equatable, CustomStringConvertible {
   static var mocks = (0..<10).map { Feed(feedId: $0, title: "feed\($0)") }
   
   public var id = UUID()
@@ -29,16 +29,19 @@ extension Feed: ReduxStateProtocol {
   
   @discardableResult
   public func reduce(action: ReduxActionProtocol) -> Self {
+    var newFeed = self
+    
     switch action {
     case let action as FeedLikeAction:
       // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
+      //if feedId == action.feed.feedId {
       if feedId == action.feed.feedId {
-        isLiked = !action.feed.isLiked
+        newFeed.isLiked = !action.feed.isLiked
       }
     default:
-      break
+      return self
     }
-    return self
+    return newFeed
   }
   
 }

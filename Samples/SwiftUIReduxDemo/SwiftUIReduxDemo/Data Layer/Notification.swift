@@ -34,7 +34,7 @@ extension Notification: ReduxStateProtocol {
   
   @discardableResult
   public func reduce(action: ReduxActionProtocol) -> Self {
-    feed = feed.codableCopy().reduce(action: action)
+    feed = feed.reduce(action: action)
     return self
   }
 }
