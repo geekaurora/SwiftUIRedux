@@ -78,9 +78,9 @@
 		C3C9F69F243B3B4B005ED324 /* SwiftUIReduxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIReduxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9F6A4243B3B4B005ED324 /* SwiftUIReduxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIReduxTests.swift; sourceTree = "<group>"; };
 		C3C9F6A6243B3B4B005ED324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3C9F70B243B3DBC005ED324 /* Subscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Subscriber.swift; path = Dispatcher/Subscriber.swift; sourceTree = "<group>"; };
-		C3C9F70C243B3DBC005ED324 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Action.swift; path = Dispatcher/Action.swift; sourceTree = "<group>"; };
-		C3C9F70D243B3DBC005ED324 /* RootStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootStore.swift; path = Dispatcher/RootStore.swift; sourceTree = "<group>"; };
+		C3C9F70B243B3DBC005ED324 /* Subscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriber.swift; sourceTree = "<group>"; };
+		C3C9F70C243B3DBC005ED324 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		C3C9F70D243B3DBC005ED324 /* RootStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +104,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C397F692243C899C003DF1CE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		C3A199D1243B3F76000C64D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +160,10 @@
 		C3C9F698243B3B4B005ED324 /* SwiftUIRedux */ = {
 			isa = PBXGroup;
 			children = (
-				C3C9F709243B3DB0005ED324 /* Dispatcher */,
+				C397F692243C899C003DF1CE /* New Group */,
+				C3C9F70D243B3DBC005ED324 /* RootStore.swift */,
+				C3C9F70B243B3DBC005ED324 /* Subscriber.swift */,
+				C3C9F70C243B3DBC005ED324 /* Action.swift */,
 				C3C9F699243B3B4B005ED324 /* SwiftUIRedux.h */,
 				C3C9F69A243B3B4B005ED324 /* Info.plist */,
 			);
@@ -167,16 +177,6 @@
 				C3C9F6A6243B3B4B005ED324 /* Info.plist */,
 			);
 			path = SwiftUIReduxTests;
-			sourceTree = "<group>";
-		};
-		C3C9F709243B3DB0005ED324 /* Dispatcher */ = {
-			isa = PBXGroup;
-			children = (
-				C3C9F70D243B3DBC005ED324 /* RootStore.swift */,
-				C3C9F70C243B3DBC005ED324 /* Action.swift */,
-				C3C9F70B243B3DBC005ED324 /* Subscriber.swift */,
-			);
-			name = Dispatcher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
