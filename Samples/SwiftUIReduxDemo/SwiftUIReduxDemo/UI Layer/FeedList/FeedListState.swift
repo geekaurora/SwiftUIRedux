@@ -11,7 +11,7 @@ public class FeedListState: Subscriber, ObservableObject {
     case let action as FeedLikeAction:
       // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
       self.feeds = feeds.map { feed in
-        if feed.Id == action.feed.Id {
+        if feed.feedId == action.feed.feedId {
           feed.isLiked = !feed.isLiked
         }
         return feed
