@@ -1,8 +1,6 @@
 import SwiftUIKit
-import SwiftUI
-import Combine
 
-/// Framework Action - Different from User Action.
+/// Protocol of Redux Action - Different from User Action.
 public protocol DispatcherActionProtocol {}
 
 public class DispatcherReloadAction: DispatcherActionProtocol {

@@ -1,0 +1,22 @@
+import SwiftUIKit
+
+/// Protocol of Subscriber.
+public protocol SubscriberProtocol: NSObjectProtocol {
+  /// Reacts to the `action`. Note that subscribers can filter action and choose whether to respond.
+  func reduce(action: DispatcherActionProtocol)
+}
+
+/// Base Subscriber that subscribes to the root store automatically when init, and unsubscribes  automatically when deinit.
+open class Subscriber: NSObject, SubscriberProtocol {
+  
+  public override init() {
+    super.init()
+    // Subscribes to the root store, and it will unsubscribe itself automatically when deinit.
+    RootStore.shared.addSubscriber(self)
+  }
+  
+  open func reduce(action: DispatcherActionProtocol) {
+    assertionFailure("\(#function) should be overriden in subclass.")
+  }
+  
+}
