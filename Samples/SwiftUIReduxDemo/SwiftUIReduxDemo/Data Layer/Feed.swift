@@ -20,7 +20,8 @@ public class Feed: Identifiable, Codable, CustomStringConvertible {
 
 extension Feed: ReduxStateProtocol {
   
-  public func reduce(action: ReduxActionProtocol) {
+  @discardableResult
+  public func reduce(action: ReduxActionProtocol) -> Self {
     switch action {
     case let action as FeedLikeAction:
       // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
@@ -30,6 +31,7 @@ extension Feed: ReduxStateProtocol {
     default:
       break
     }
+    return self
   }
   
 }

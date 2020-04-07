@@ -17,8 +17,11 @@ public class Notification: Identifiable, Codable, CustomStringConvertible {
 }
 
 extension Notification: ReduxStateProtocol {
-  public func reduce(action: ReduxActionProtocol) {
+  
+  @discardableResult
+  public func reduce(action: ReduxActionProtocol) -> Self {
     feed.reduce(action: action)
+    return self
   }
 }
 
