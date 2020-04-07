@@ -10,7 +10,7 @@
 
  * Keep `State` consistent across features by `pub/sub` pattern with `reducers` of `RootStore`. 
  * Waterfall `Action` propagation flow from root to `State` subtree.
- 
+  
 ### Unidirectional Data Flow
  * **Dispatcher:** Propagates domained actions
 
