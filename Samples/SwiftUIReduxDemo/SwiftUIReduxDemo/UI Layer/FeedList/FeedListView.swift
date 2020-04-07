@@ -16,7 +16,8 @@ struct FeedCell: View {
         dispatchLikeFeedAction(feed: self.feed)
       }) {
         Text(feed.isLiked ? "UnLike" : "Like")
-      }.modifier(NormalButtonStyle())
+      }
+      .modifier(NormalButtonStyle())
     }
   }
 }

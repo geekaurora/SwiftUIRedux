@@ -22,7 +22,8 @@ struct ContentTextStyle: ViewModifier {
 struct NormalButtonStyle: ViewModifier {
   func body(content: Content) -> some View {
     content
-      .foregroundColor(.blue)
+      .buttonStyle(BorderlessButtonStyle())
+      //.foregroundColor(.blue)
   }
 }
 
