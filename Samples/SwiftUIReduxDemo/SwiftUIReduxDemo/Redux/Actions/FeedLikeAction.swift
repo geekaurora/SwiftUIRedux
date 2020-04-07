@@ -11,5 +11,5 @@ func dispatchLikeFeedAction(feed: Feed) {
   // Deep copy to retain current state, so avoid duplicate mutations on the same model.
   let copy = feed.codableCopy()
   dispatch(action: FeedLikeAction(feed: copy))
-}
+} 
 
