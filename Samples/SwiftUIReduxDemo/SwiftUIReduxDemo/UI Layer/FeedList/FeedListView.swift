@@ -21,14 +21,6 @@ struct FeedCell: View {
     }
   }
   
-  
-  List {
-    HStack {
-      Text("One").onTapGesture { print("One") }
-      Text("Two").onTapGesture { print("Two") }
-    }
-  }
-  
 }
 
 struct FeedListView: View {
