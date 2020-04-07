@@ -21,8 +21,7 @@ public class Feed: Identifiable, Codable, Equatable, CustomStringConvertible {
   // MARK: - Equatable
   
   public static func == (lhs: Feed, rhs: Feed) -> Bool {
-    return lhs.isEqual(toCodable: rhs) &&
-      lhs.isLiked == rhs.isLiked
+    return lhs.isEqual(toCodable: rhs)
   }
   
 }

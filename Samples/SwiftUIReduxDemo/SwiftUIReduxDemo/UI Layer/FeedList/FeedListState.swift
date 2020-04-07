@@ -8,7 +8,11 @@ public class FeedListState: Subscriber, ObservableObject {
   
   @discardableResult
   public override func reduce(action: ReduxActionProtocol) -> Self {
-    self.feeds = feeds.map { $0.reduce(action: action)}
+    let oldFeeds = feeds.map { $0.codableCopy() }
+    let newFeeds = feeds.map { $0.reduce(action: action) }
+    if newFeeds != oldFeeds {
+      self.feeds = newFeeds
+    }
     return self
   }
   
