@@ -9,7 +9,12 @@ struct FeedLikeAction: ReduxActionProtocol {
 
 func dispatchLikeFeedAction(feed: Feed) {
   // Deep copy to retain current state, so avoid duplicate mutations on the same model.
-  let copy = feed.codableCopy()
-  dispatch(action: FeedLikeAction(feed: copy))
-} 
+  //let copy = feed.codableCopy()
+  //dispatch(action: FeedLikeAction(feed: copy))
+
+  // No need deep copy to retain current state,
+  // as Feed/Notification are now stuct, will create deep copy automatically,
+  // so avoid duplicate mutations on the same model.
+  dispatch(action: FeedLikeAction(feed: feed))
+}
 
