@@ -6,7 +6,7 @@ public func dispatch(action: ReduxActionProtocol) {
   RootStore.shared.dispatch(action: action)
 }
 
-/// Root dispatcher of the app, responsible to notify SubDispatchers - tabs.
+/// Root store of the app that is responsible to notify subscribers.
 ///
 /// - Note:
 /// Dispatcher only holds weak reference to subscribers, no need to explicitly call `unsubscribe()` when deinit.
@@ -38,22 +38,6 @@ public class RootStore {
 
   public func contains(_ subscriber: Subscriber) -> Bool {
     return subscribers.contains(subscriber)
-  }
-  
-  // MARK: - Substate
-  
-  /// Retrieves the first matched substate with `StateType`from `subscribers` if presents, returns nil otherwise.
-  /// e.g. let feedListState: FeedListState? = RootStore.shared.retrieveSubstate()
-  ///
-  /// - Note: shouldn't be used if there're multiple subscribers with the same type.
-  ///
-  /// - DEPRECATED: States are better to be domained for safety consideration.
-  /**
-  public func retrieveSubstate<T>() -> T? {
-    return subscribers.allObjects
-      .compactMap { $0 as? T }
-      .first
-  }
-  */
+  }  
   
 }
