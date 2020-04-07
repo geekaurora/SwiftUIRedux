@@ -6,10 +6,8 @@ class NotificationListState: Subscriber, ObservableObject {
   
   @Published var notifications: [Notification] = Notification.mocks
   
-  @discardableResult
-  public override func reduce(action: ReduxActionProtocol) -> Self {
+  public override func reduce(action: ReduxActionProtocol) {
     notifications = notifications.map { $0.reduce(action: action) }
-    return self
   }
   
 }

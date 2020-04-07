@@ -3,10 +3,6 @@ import SwiftUIKit
 import SwiftUIRedux
 import CZUtils
 
-struct FeedLikeAction: ReduxActionProtocol {
-  let feed: Feed
-}
-
 struct FeedCell: View {
   let feed: Feed
   var body: some View {
