@@ -15,10 +15,8 @@ struct NotificationDetailsView: View {
       Text(state.notification.title)
         .modifier(ContentTextStyle())
       
-      Spacer()
-      
+      Spacer()      
       Button(action: {
-        print("tapped like.")
         dispatch(action: FeedLikeAction(feed: self.state.notification.feed))
       }) {
         Text(state.notification.feed.isLiked ? "UnLike" : "Like")
