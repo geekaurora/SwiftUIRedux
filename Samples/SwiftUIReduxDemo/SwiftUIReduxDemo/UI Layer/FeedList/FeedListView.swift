@@ -18,8 +18,17 @@ struct FeedCell: View {
         Text(feed.isLiked ? "UnLike" : "Like")
       }
       .modifier(NormalButtonStyle())
-    } 
+    }
   }
+  
+  
+  List {
+    HStack {
+      Text("One").onTapGesture { print("One") }
+      Text("Two").onTapGesture { print("Two") }
+    }
+  }
+  
 }
 
 struct FeedListView: View {
