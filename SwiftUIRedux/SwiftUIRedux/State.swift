@@ -3,7 +3,7 @@ import SwiftUIKit
 /// Protocol that defines Redux State.
 public protocol ReduxStateProtocol {
   /// Reduce function that generates new State of self with the input `action`.
-  /// i.e. (OldState, action) => NewState.
+  /// i.e. (oldState, action) => newState.
   ///
   /// P.S. State can update parts of deep copy of itself or filter `action` and choose whether to respond.
   ///
