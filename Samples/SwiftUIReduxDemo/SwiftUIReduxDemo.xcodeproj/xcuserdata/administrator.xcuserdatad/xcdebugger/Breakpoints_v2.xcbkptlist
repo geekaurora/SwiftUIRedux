@@ -30,8 +30,8 @@
             filePath = "SwiftUIReduxDemo/Data Layer/Feed.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "reduce(action:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -72,7 +72,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "384961B9-692F-4FE6-8C22-EFB88650BB9A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftUIReduxDemo/UI Layer/NotificationList/NotificationDetailsView.swift"
@@ -85,7 +85,7 @@
             <Locations>
                <Location
                   uuid = "384961B9-692F-4FE6-8C22-EFB88650BB9A - e165efa852d87506"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SwiftUIReduxDemo.NotificationDetailsView.body.getter : some"
@@ -100,7 +100,7 @@
                </Location>
                <Location
                   uuid = "384961B9-692F-4FE6-8C22-EFB88650BB9A - 94224e2082c7cdad"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ModifiedContent&lt;SwiftUI.Text, SwiftUIReduxDemo.ContentTextStyle&gt;, SwiftUI.Spacer, SwiftUI.ModifiedContent&lt;SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUIReduxDemo.NormalButtonStyle&gt;)&gt; in SwiftUIReduxDemo.NotificationDetailsView.body.getter : some"
@@ -114,6 +114,22 @@
                   offsetFromSymbolStart = "179">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C09703D7-5C95-4D74-ABC9-E6E19417263E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIReduxDemo/UI Layer/FeedList/FeedDetailsState.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "init(feed:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
