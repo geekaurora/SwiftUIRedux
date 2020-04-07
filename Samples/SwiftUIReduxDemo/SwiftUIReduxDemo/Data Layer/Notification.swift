@@ -8,7 +8,13 @@ public class Notification: Identifiable, Codable, Equatable, CustomStringConvert
 
   public var id = UUID()
   public let title: String
-  public let feed: Feed
+  public var feed: Feed {
+    willSet {
+      if feed != newValue {
+        id = UUID()
+      }
+    }
+  }
   
   public init(title: String, feed: Feed) {
     self.title = title
@@ -27,7 +33,7 @@ extension Notification: ReduxStateProtocol {
   
   @discardableResult
   public func reduce(action: ReduxActionProtocol) -> Self {
-    feed.reduce(action: action)
+    feed = feed.reduce(action: action)
     return self
   }
 }
