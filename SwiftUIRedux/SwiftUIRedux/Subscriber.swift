@@ -13,7 +13,7 @@ open class Subscriber: NSObject, SubscriberProtocol {
     super.init()
     
     // Subscribes to the root store, and it will unsubscribe itself automatically when deinit.
-    RootStore.shared.addSubscriber(self)
+    RootStore.shared.subscribe(self)
   }
   
   open func reduce(action: ReduxActionProtocol) {

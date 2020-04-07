@@ -9,7 +9,7 @@ public func dispatch(action: ReduxActionProtocol) {
 /// Root dispatcher of the app, responsible to notify SubDispatchers - tabs.
 ///
 /// - Note:
-/// Dispatcher only holds weak reference to subscribers, no need to explicitly call `removeSubscriber()` when deinit.
+/// Dispatcher only holds weak reference to subscribers, no need to explicitly call `unsubscribe()` when deinit.
 public class RootStore {
 
   public static var shared = RootStore()
@@ -23,16 +23,16 @@ public class RootStore {
       .forEach { $0.reduce(action: action) }
   }
 
-  public func addSubscriber(_ subscriber: Subscriber) {
-    guard !containsSubscriber(subscriber) else { return }
+  public func subscribe(_ subscriber: Subscriber) {
+    guard !contains(subscriber) else { return }
     subscribers.add(subscriber)
   }
 
-  public func removeSubscriber(_ subscriber: Subscriber) {
+  public func unsubscribe(_ subscriber: Subscriber) {
     subscribers.remove(subscriber)
   }
 
-  public func containsSubscriber(_ subscriber: Subscriber) -> Bool {
+  public func contains(_ subscriber: Subscriber) -> Bool {
     return subscribers.contains(subscriber)
   }
 
