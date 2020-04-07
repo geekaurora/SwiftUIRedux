@@ -3,7 +3,7 @@ import SwiftUIKit
 import SwiftUIRedux
 import CZUtils
 
-struct FeedLikeAction: DispatcherActionProtocol {
+struct FeedLikeAction: ActionProtocol {
   let feed: Feed
 }
 

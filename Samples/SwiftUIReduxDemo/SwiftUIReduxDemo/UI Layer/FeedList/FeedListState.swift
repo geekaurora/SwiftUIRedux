@@ -9,10 +9,10 @@ class FeedListState: NSObject, ObservableObject, SubscriberProtocol {
     super.init()
     
     // Subscribe to root Dispatcher.
-    RootDispatcher.shared.addSubscriber(self)
+    RootStore.shared.addSubscriber(self)
   }
   
-  public func reduce(action: DispatcherActionProtocol) {
+  public func reduce(action: ActionProtocol) {
     switch action {
     case let action as FeedLikeAction:
       // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
