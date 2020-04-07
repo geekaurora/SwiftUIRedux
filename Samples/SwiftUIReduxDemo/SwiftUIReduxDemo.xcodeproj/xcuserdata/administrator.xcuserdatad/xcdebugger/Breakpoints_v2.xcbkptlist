@@ -68,5 +68,53 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "384961B9-692F-4FE6-8C22-EFB88650BB9A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIReduxDemo/UI Layer/NotificationList/NotificationDetailsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "384961B9-692F-4FE6-8C22-EFB88650BB9A - e165efa852d87506"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUIReduxDemo.NotificationDetailsView.body.getter : some"
+                  moduleName = "SwiftUIReduxDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/__Github/SwiftUIRedux/Samples/SwiftUIReduxDemo/SwiftUIReduxDemo/UI%20Layer/NotificationList/NotificationDetailsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "319">
+               </Location>
+               <Location
+                  uuid = "384961B9-692F-4FE6-8C22-EFB88650BB9A - 94224e2082c7cdad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ModifiedContent&lt;SwiftUI.Text, SwiftUIReduxDemo.ContentTextStyle&gt;, SwiftUI.Spacer, SwiftUI.ModifiedContent&lt;SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUIReduxDemo.NormalButtonStyle&gt;)&gt; in SwiftUIReduxDemo.NotificationDetailsView.body.getter : some"
+                  moduleName = "SwiftUIReduxDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/__Github/SwiftUIRedux/Samples/SwiftUIReduxDemo/SwiftUIReduxDemo/UI%20Layer/NotificationList/NotificationDetailsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "179">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

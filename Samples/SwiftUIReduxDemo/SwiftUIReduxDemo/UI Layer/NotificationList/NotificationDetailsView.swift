@@ -11,7 +11,9 @@ struct NotificationDetailsView: View {
   }
   
   var body: some View {
-    HStack {
+    print(state.notification.feed)
+    
+    return HStack {
       Text(state.notification.title)
         .modifier(ContentTextStyle())
       
