@@ -3,6 +3,7 @@ import SwiftUIRedux
 import CZUtils
 
 public class FeedListState: Subscriber, ObservableObject {
+  
   @Published var feeds: [Feed] = Feed.mocks
   
   public override func reduce(action: DispatcherActionProtocol) {

@@ -3,6 +3,7 @@ import SwiftUIRedux
 import CZUtils
 
 class NotificationListState: Subscriber, ObservableObject {
+  
   @Published var notifications: [Notification] = Notification.mocks
   
   public override func reduce(action: DispatcherActionProtocol) {
