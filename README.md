@@ -31,7 +31,7 @@
   <img src="./Docs/FLUX.jpeg">
 
 
-### [Instagram Demo](https://github.com/showt1me/CZInstagram)
-Implemented on top of **ReactiveListViewKit**
+### Instagram Demo
+Implemented on top of **SwiftUIRedux**.
 
 <img src="./Docs/CZInstagram.gif">
