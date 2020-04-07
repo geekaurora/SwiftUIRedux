@@ -16,7 +16,7 @@ open class Subscriber: NSObject, SubscriberProtocol {
   }
   
   open func reduce(action: ReduxActionProtocol) {
-    assertionFailure("\(#function) should be overriden in subclass.")
+    assertionFailure("`\(#function)` should be overriden in subclass - `\(type(of: self))`.")
   }
   
 }
