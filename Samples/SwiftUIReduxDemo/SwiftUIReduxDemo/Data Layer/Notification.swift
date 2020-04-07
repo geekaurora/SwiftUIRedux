@@ -1,7 +1,7 @@
 import SwiftUIRedux
 import CZUtils
 
-public class Notification: Identifiable, Codable, CustomStringConvertible {
+public class Notification: Identifiable, Codable, Equatable, CustomStringConvertible {
   static var mocks = (0..<10).map {
     Notification(title: "Notification\($0)", feed: Feed(feedId: $0, title: "feed\($0)"))
   }
@@ -14,6 +14,13 @@ public class Notification: Identifiable, Codable, CustomStringConvertible {
     self.title = title
     self.feed = feed
   }
+  
+  // MARK: - Equatable
+  
+  public static func == (lhs: Notification, rhs: Notification) -> Bool {
+    lhs.isEqual(toCodable: rhs)
+  }
+  
 }
 
 extension Notification: ReduxStateProtocol {

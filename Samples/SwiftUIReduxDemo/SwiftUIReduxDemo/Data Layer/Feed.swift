@@ -1,7 +1,8 @@
 import SwiftUIRedux
 import CZUtils
 
-public class Feed: Identifiable, Codable, CustomStringConvertible {
+public class Feed: Identifiable, Codable, Equatable, CustomStringConvertible {
+  
   static var mocks = (0..<10).map { Feed(feedId: $0, title: "feed\($0)") }
   
   public var id = UUID()
@@ -16,6 +17,14 @@ public class Feed: Identifiable, Codable, CustomStringConvertible {
     self.title = title
     self.isLiked = isLiked
   }
+  
+  // MARK: - Equatable
+  
+  public static func == (lhs: Feed, rhs: Feed) -> Bool {
+    return lhs.isEqual(toCodable: rhs) &&
+      lhs.isLiked == rhs.isLiked
+  }
+  
 }
 
 extension Feed: ReduxStateProtocol {
