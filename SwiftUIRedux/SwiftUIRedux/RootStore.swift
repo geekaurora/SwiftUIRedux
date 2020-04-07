@@ -43,14 +43,17 @@ public class RootStore {
   // MARK: - Substate
   
   /// Retrieves the first matched substate with `StateType`from `subscribers` if presents, returns nil otherwise.
+  /// e.g. let feedListState: FeedListState? = RootStore.shared.retrieveSubstate()
   ///
   /// - Note: shouldn't be used if there're multiple subscribers with the same type.
   ///
-  /// e.g. let feedListState: FeedListState? = RootStore.shared.retrieveSubstate()
+  /// - DEPRECATED: States are better to be domained for safety consideration.
+  /**
   public func retrieveSubstate<T>() -> T? {
     return subscribers.allObjects
       .compactMap { $0 as? T }
       .first
   }
+  */
   
 }
