@@ -8,8 +8,8 @@ public class FeedListState: Subscriber, ObservableObject {
   
   @discardableResult
   public override func reduce(action: ReduxActionProtocol) -> Self {
-    // No need to deep copy, SwiftUI will decide wether to reload based on `feeds` diff.
-    feeds.forEach { $0.reduce(action: action) }
+    // No need of deep copy, SwiftUI decides wether to reload by List diff.
+    feeds = feeds.map { $0.reduce(action: action) }
     return self
   }
   
