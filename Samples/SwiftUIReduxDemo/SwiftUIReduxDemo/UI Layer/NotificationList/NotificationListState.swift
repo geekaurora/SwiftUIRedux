@@ -12,7 +12,7 @@ class NotificationListState: NSObject, ObservableObject, SubscriberProtocol {
     RootStore.shared.addSubscriber(self)
   }
   
-  public func reduce(action: ActionProtocol) {
+  public func reduce(action: DispatcherActionProtocol) {
     switch action {
     case let action as FeedLikeAction:
       // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.

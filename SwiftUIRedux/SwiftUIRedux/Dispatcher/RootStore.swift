@@ -7,7 +7,7 @@ import SwiftUIKit
 public typealias SubscriberObject = NSObject & SubscriberProtocol
 
 /// Convenience method to dispatch `action` to subscribers of `RootStore.shared`.
-public func dispatch(action: ActionProtocol) {
+public func dispatch(action: DispatcherActionProtocol) {
   RootStore.shared.dispatch(action: action)
 }
 
@@ -21,7 +21,7 @@ public class RootStore {
 
   private var subscribers = NSHashTable<AnyObject>.weakObjects()
 
-  public func dispatch(action: ActionProtocol = DispatcherReloadAction()) {
+  public func dispatch(action: DispatcherActionProtocol = DispatcherReloadAction()) {
     // Notify all subscribers. Note that subscribers can filter action and choose whether to respond.
     subscribers.allObjects
       .compactMap { ($0 as? SubscriberObject).assertIfNil }

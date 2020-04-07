@@ -140,7 +140,6 @@
 		C37B5FFC243B615B00F69EC1 /* FeedList */ = {
 			isa = PBXGroup;
 			children = (
-				C37B5FF3243B511500F69EC1 /* Feed.swift */,
 				C3C9F6C0243B3BF6005ED324 /* FeedListView.swift */,
 				C37B6000243B619600F69EC1 /* FeedListState.swift */,
 			);
@@ -150,7 +149,6 @@
 		C37B5FFD243B616200F69EC1 /* NotificationList */ = {
 			isa = PBXGroup;
 			children = (
-				C37B5FFA243B5FA800F69EC1 /* Notification.swift */,
 				C37B5FF6243B5F1900F69EC1 /* NotificationListView.swift */,
 				C37B5FFE243B617D00F69EC1 /* NotificationListState.swift */,
 			);
@@ -174,6 +172,15 @@
 				C37B600D243B64DD00F69EC1 /* CZUtils.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C37B6016243C809700F69EC1 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				C37B5FF3243B511500F69EC1 /* Feed.swift */,
+				C37B5FFA243B5FA800F69EC1 /* Notification.swift */,
+			);
+			path = "Data Layer";
 			sourceTree = "<group>";
 		};
 		C3C9F6B0243B3BF5005ED324 = {
@@ -201,6 +208,7 @@
 		C3C9F6BB243B3BF5005ED324 /* SwiftUIReduxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C37B6016243C809700F69EC1 /* Data Layer */,
 				C37B6007243B640400F69EC1 /* UI Layer */,
 				C3C9F6F8243B3CF6005ED324 /* Resources */,
 				C3C9F6F7243B3CD8005ED324 /* Supported_Files */,
