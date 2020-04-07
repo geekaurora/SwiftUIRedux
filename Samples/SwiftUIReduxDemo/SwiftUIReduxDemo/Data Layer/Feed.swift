@@ -30,17 +30,16 @@ extension Feed: ReduxStateProtocol {
   
   @discardableResult
   public func reduce(action: ReduxActionProtocol) -> Self {
-    let copy = codableCopy()
     switch action {
     case let action as FeedLikeAction:
       // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
       if feedId == action.feed.feedId {
-        copy.isLiked = !isLiked
+        isLiked = !isLiked
       }
     default:
       break
     }
-    return copy
+    return self
   }
   
 }

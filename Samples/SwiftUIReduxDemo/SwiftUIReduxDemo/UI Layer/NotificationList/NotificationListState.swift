@@ -8,7 +8,7 @@ class NotificationListState: Subscriber, ObservableObject {
   
   @discardableResult
   public override func reduce(action: ReduxActionProtocol) -> Self {
-    self.notifications = notifications.map { $0.reduce(action: action) }
+    notifications.forEach { $0.reduce(action: action) }
     return self
   }
   
