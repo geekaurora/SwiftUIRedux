@@ -11,6 +11,7 @@ public class Notification: Identifiable, Codable, Equatable, CustomStringConvert
   public var feed: Feed {
     willSet {
       if feed != newValue {
+        // Triggers list reload with different id.
         id = UUID()
       }
     }
