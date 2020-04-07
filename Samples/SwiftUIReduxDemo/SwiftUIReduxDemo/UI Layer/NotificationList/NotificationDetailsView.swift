@@ -19,7 +19,7 @@ struct NotificationDetailsView: View {
       
       Spacer()      
       Button(action: {
-        dispatch(action: FeedLikeAction(feed: self.state.notification.feed))
+        dispatchLikeFeedAction(feed: self.state.notification.feed)
       }) {
         Text(state.notification.feed.isLiked ? "UnLike" : "Like")
       }.modifier(NormalButtonStyle())
