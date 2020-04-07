@@ -6,7 +6,7 @@ public protocol SubscriberProtocol: NSObjectProtocol {
   func reduce(action: ReduxActionProtocol)
 }
 
-/// Base class of Subscriber that subscribes to the root store automatically when init, and unsubscribes  automatically when deinit.
+/// Base Subscriber that subscribes to the root store automatically when init, and unsubscribes  automatically when deinit.
 open class Subscriber: NSObject, SubscriberProtocol {
   
   public override init() {
