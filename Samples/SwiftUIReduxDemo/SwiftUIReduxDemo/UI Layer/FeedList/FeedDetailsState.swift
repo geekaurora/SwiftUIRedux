@@ -11,6 +11,6 @@ class FeedDetailsState: Subscriber, ObservableObject {
   }
   
   public override func reduce(action: ReduxActionProtocol) {
-    feed = feed.codableCopy().reduce(action: action)
+    self.feed = feed.codableCopy().reduce(action: action)
   }
 }

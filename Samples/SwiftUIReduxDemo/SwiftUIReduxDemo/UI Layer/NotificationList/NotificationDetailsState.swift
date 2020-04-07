@@ -11,8 +11,7 @@ class NotificationDetailsState: Subscriber, ObservableObject {
   }
   
   public override func reduce(action: ReduxActionProtocol) {
-    //notification = notification.codableCopy().reduce(action: action)
-    
-    notification = notification.reduce(action: action)
+    self.notification = notification.codableCopy().reduce(action: action)
+    //self.notification = notification.reduce(action: action)
   }
 }
