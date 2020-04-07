@@ -9,6 +9,7 @@ struct NotificationCell: View {
   var body: some View {
     VStack(alignment: .leading) {
       Text("\(notification.title)")
+        .modifier(HeadlineTextStyle())
       
       HStack {
         Text(notification.feed.title)
@@ -19,6 +20,7 @@ struct NotificationCell: View {
         }) {
           Text(notification.feed.isLiked ? "UnLike" : "Like")
         }
+        .modifier(NormalButtonStyle())
       }
     }
   }
