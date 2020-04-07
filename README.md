@@ -30,8 +30,3 @@
 
   <img src="./Docs/FLUX.jpeg">
 
-
-### Instagram Demo
-Implemented on top of **SwiftUIRedux**.
-
-<img src="./Docs/CZInstagram.gif">
