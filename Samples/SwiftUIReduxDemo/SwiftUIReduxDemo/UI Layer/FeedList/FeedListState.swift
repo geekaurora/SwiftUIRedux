@@ -6,8 +6,10 @@ public class FeedListState: Subscriber, ObservableObject {
   
   @Published var feeds: [Feed] = Feed.mocks
   
-  public override func reduce(action: ReduxActionProtocol) {
+  @discardableResult
+  public override func reduce(action: ReduxActionProtocol) -> Self {
     self.feeds = feeds.map { $0.reduce(action: action)}
+    return self
   }
   
 }

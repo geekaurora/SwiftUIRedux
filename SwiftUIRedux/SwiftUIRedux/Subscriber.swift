@@ -3,7 +3,8 @@ import SwiftUIKit
 /// Protocol of Subscriber.
 public protocol SubscriberProtocol: NSObjectProtocol {
   /// Reacts to the `action`. Note that subscribers can filter action and choose whether to respond.
-  func reduce(action: ReduxActionProtocol)
+  @discardableResult
+  func reduce(action: ReduxActionProtocol) -> Self
 }
 
 /// Base Subscriber that subscribes to the root store automatically when init, and unsubscribes  automatically when deinit.
@@ -16,8 +17,10 @@ open class Subscriber: NSObject, SubscriberProtocol {
     RootStore.shared.subscribe(self)
   }
   
-  open func reduce(action: ReduxActionProtocol) {
+  @discardableResult
+  open func reduce(action: ReduxActionProtocol)  -> Self {
     assertionFailure("`\(#function)` should be overriden in subclass - `\(type(of: self))`.")
+    return self
   }
   
 }
