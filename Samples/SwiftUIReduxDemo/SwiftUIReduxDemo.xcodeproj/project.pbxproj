@@ -22,6 +22,9 @@
 		C397F685243C816A003DF1CE /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F684243C816A003DF1CE /* Styles.swift */; };
 		C397F696243CAA8F003DF1CE /* FeedDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F695243CAA8F003DF1CE /* FeedDetailsView.swift */; };
 		C397F69A243CAAB4003DF1CE /* FeedLikeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F699243CAAB4003DF1CE /* FeedLikeAction.swift */; };
+		C397F69F243CAD1A003DF1CE /* FeedDetailsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F69E243CAD1A003DF1CE /* FeedDetailsState.swift */; };
+		C397F6A2243CAD42003DF1CE /* NotificationDetailsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F6A0243CAD42003DF1CE /* NotificationDetailsState.swift */; };
+		C397F6A3243CAD42003DF1CE /* NotificationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F6A1243CAD42003DF1CE /* NotificationDetailsView.swift */; };
 		C3C9F6BD243B3BF5005ED324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F6BC243B3BF5005ED324 /* AppDelegate.swift */; };
 		C3C9F6BF243B3BF6005ED324 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F6BE243B3BF6005ED324 /* SceneDelegate.swift */; };
 		C3C9F6C1243B3BF6005ED324 /* FeedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F6C0243B3BF6005ED324 /* FeedListView.swift */; };
@@ -98,6 +101,9 @@
 		C397F684243C816A003DF1CE /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		C397F695243CAA8F003DF1CE /* FeedDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDetailsView.swift; sourceTree = "<group>"; };
 		C397F699243CAAB4003DF1CE /* FeedLikeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLikeAction.swift; sourceTree = "<group>"; };
+		C397F69E243CAD1A003DF1CE /* FeedDetailsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailsState.swift; sourceTree = "<group>"; };
+		C397F6A0243CAD42003DF1CE /* NotificationDetailsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDetailsState.swift; sourceTree = "<group>"; };
+		C397F6A1243CAD42003DF1CE /* NotificationDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDetailsView.swift; sourceTree = "<group>"; };
 		C3C9F6B9243B3BF5005ED324 /* SwiftUIReduxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIReduxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9F6BC243B3BF5005ED324 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3C9F6BE243B3BF6005ED324 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,8 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				C3C9F6C0243B3BF6005ED324 /* FeedListView.swift */,
-				C397F695243CAA8F003DF1CE /* FeedDetailsView.swift */,
 				C37B6000243B619600F69EC1 /* FeedListState.swift */,
+				C397F695243CAA8F003DF1CE /* FeedDetailsView.swift */,
+				C397F69E243CAD1A003DF1CE /* FeedDetailsState.swift */,
 			);
 			path = FeedList;
 			sourceTree = "<group>";
@@ -158,6 +165,8 @@
 			children = (
 				C37B5FF6243B5F1900F69EC1 /* NotificationListView.swift */,
 				C37B5FFE243B617D00F69EC1 /* NotificationListState.swift */,
+				C397F6A1243CAD42003DF1CE /* NotificationDetailsView.swift */,
+				C397F6A0243CAD42003DF1CE /* NotificationDetailsState.swift */,
 			);
 			path = NotificationList;
 			sourceTree = "<group>";
@@ -465,9 +474,12 @@
 				C397F69A243CAAB4003DF1CE /* FeedLikeAction.swift in Sources */,
 				C37B5FFB243B5FA800F69EC1 /* Notification.swift in Sources */,
 				C3C9F6BF243B3BF6005ED324 /* SceneDelegate.swift in Sources */,
+				C397F6A3243CAD42003DF1CE /* NotificationDetailsView.swift in Sources */,
 				C37B5FF8243B5F1900F69EC1 /* NotificationListView.swift in Sources */,
 				C397F696243CAA8F003DF1CE /* FeedDetailsView.swift in Sources */,
+				C397F69F243CAD1A003DF1CE /* FeedDetailsState.swift in Sources */,
 				C37B5FFF243B617D00F69EC1 /* NotificationListState.swift in Sources */,
+				C397F6A2243CAD42003DF1CE /* NotificationDetailsState.swift in Sources */,
 				C37B6006243B623D00F69EC1 /* TabsView.swift in Sources */,
 				C3C9F6C1243B3BF6005ED324 /* FeedListView.swift in Sources */,
 				C37B6001243B619600F69EC1 /* FeedListState.swift in Sources */,
