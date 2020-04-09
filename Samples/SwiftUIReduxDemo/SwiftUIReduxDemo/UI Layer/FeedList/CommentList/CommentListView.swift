@@ -30,7 +30,7 @@ struct CommentListView: View {
   var body: some View {
     return VStack {
       Spacer(minLength: 5)
-      ForEach(comments) { comment in
+      ForEach(comments, id: \.diffId) { comment in
           CommentCell(comment: comment)
       }
     }

@@ -1,18 +1,18 @@
+import SwiftUIKit
 import SwiftUIRedux
 import CZUtils
 
-public struct Notification: Identifiable, Codable, Equatable, CustomStringConvertible {
+public struct Notification: ListDiffable, Codable, Equatable, CustomStringConvertible {
   static var mocks = (0..<10).map {
     Notification(title: "Notification\($0)", feed: Feed(feedId: $0, title: "feed\($0)"))
   }
 
-  public var id = UUID()
+  public var diffId = UUID()
   public let title: String
   public var feed: Feed {
     willSet {
       if feed != newValue {
-        // Triggers list reload with different id.
-        id = UUID()
+        updateDiffId()
       }
     }
   }

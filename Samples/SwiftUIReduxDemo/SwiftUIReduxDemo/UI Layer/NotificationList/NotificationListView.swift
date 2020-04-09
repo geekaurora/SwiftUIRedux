@@ -22,7 +22,7 @@ struct NotificationListView: View {
   
   var body: some View {
     return List {
-      ForEach(state.notifications) { notification in
+      ForEach(state.notifications, id: \.diffId) { notification in
         NavigationLink(destination: NotificationDetailsView(notification: notification)) {
           NotificationCell(notification: notification)
         }
