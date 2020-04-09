@@ -18,7 +18,7 @@ public class ReduxRootStore {
 
   // MARK: - Dispatch
   
-  public func dispatch(action: ReduxActionProtocol = ReduxReloadAction()) {
+  public func dispatch(action: ReduxActionProtocol) {
     // Notify all subscribers. Note that subscribers can filter action and choose whether to respond.
     subscribers.allObjects
       .compactMap { ($0 as? ReduxSubscriber).assertIfNil }
