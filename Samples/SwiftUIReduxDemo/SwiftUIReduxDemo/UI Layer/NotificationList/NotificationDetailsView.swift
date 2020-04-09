@@ -11,24 +11,7 @@ struct NotificationDetailsView: View {
   }
   
   var body: some View {
-    print(state.notification.feed)
-    
-    return VStack(alignment: .leading) {
-      Text("\(state.notification.title)")
-        .modifier(HeadlineTextStyle())
-      
-      HStack {
-        Text(state.notification.feed.title)
-        Spacer()
-        Button(action: {
-          print("tapped like.")
-          dispatchLikeFeedAction(feed: self.state.notification.feed)
-        }) {
-          Text(state.notification.feed.isLiked ? "UnLike" : "Like")
-        }
-        .modifier(NormalButtonStyle())
-      }
-    }
-    
+    print(state.notification.feed)    
+    return NotificationCell(notification: state.notification)
   }
 }

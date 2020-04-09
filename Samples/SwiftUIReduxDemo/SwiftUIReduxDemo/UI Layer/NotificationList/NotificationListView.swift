@@ -11,17 +11,7 @@ struct NotificationCell: View {
       Text("\(notification.title)")
         .modifier(HeadlineTextStyle())
       
-      HStack {
-        Text(notification.feed.title)
-        Spacer()
-        Button(action: {
-          print("tapped like.")
-          dispatchLikeFeedAction(feed: self.notification.feed)
-        }) {
-          Text(notification.feed.isLiked ? "UnLike" : "Like")
-        }
-        .modifier(NormalButtonStyle())
-      }
+      FeedCell(feed: notification.feed)
     }
   }
 }
