@@ -1,6 +1,9 @@
 import SwiftUIKit
 
 /// Base ReduxSubscriber that subscribes to the root store automatically when init, and unsubscribes  automatically when deinit.
+///
+/// - Note:
+/// Redux subscriber is normal RootState of RootView for each feature which is equivalant to FeatureViewController.
 open class ReduxSubscriber: NSObject {
   
   public override init() {
