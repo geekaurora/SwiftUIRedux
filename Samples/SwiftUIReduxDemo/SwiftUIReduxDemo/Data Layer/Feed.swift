@@ -21,7 +21,6 @@ public struct Feed: Identifiable, Codable, Equatable, CustomStringConvertible {
     self.feedId = feedId
     self.title = title
     self.isLiked = isLiked
-    //self.comments = (0..<1).map { Comment(commentId: $0, title: "comment\(feedId)-\($0)")}
     self.addComment()
   }
   
@@ -41,6 +40,7 @@ public struct Feed: Identifiable, Codable, Equatable, CustomStringConvertible {
 extension Feed: ReduxStateProtocol {
   @discardableResult
   public func reduce(action: ReduxActionProtocol) -> Self {
+    // Note: deep copy of `self`.
     var newFeed = self
     
     switch action {
