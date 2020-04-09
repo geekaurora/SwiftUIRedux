@@ -20,7 +20,7 @@ struct FeedCell: View {
         Button(action: {
           print("tapped AddComment.")
           dispatch(action: FeedAddCommentAction(feed: self.feed))
-        }) {
+        }) { 
           Text("Comment")
         }
         .modifier(NormalButtonStyle())
