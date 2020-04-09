@@ -42,11 +42,11 @@ extension Feed: ReduxStateProtocol {
   public func reduce(action: ReduxActionProtocol) -> Self {
     // Note: deep copy of `self`.
     var newFeed = self
+    newFeed.comments = comments.map { $0.reduce(action: action) }
     
     switch action {
     case let action as FeedLikeAction:
       // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
-      //if feedId == action.feed.feedId {
       if feedId == action.feed.feedId {
         newFeed.isLiked = !action.feed.isLiked
       }
@@ -55,7 +55,7 @@ extension Feed: ReduxStateProtocol {
         newFeed.addComment()
       }
     default:
-      return self
+      break
     }
     return newFeed
   }

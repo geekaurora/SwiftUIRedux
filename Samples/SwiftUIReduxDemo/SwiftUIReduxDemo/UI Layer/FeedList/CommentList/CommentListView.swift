@@ -13,7 +13,7 @@ struct CommentCell: View {
       
       Spacer()
       Button(action: {
-        print("tapped like.")
+        print("tapped like comment.")
         dispatch(action: CommentLikeAction(comment: self.comment))
       }) {
         Text(comment.isLiked ? "UnLike" : "Like")

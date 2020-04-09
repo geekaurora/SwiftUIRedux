@@ -24,7 +24,6 @@ public class FeedListState: Subscriber, ObservableObject {
         return
       }
       self.feeds = feeds
-      break
     default:
       // No need of deep copy, SwiftUI decides wether to reload by List diff.
       feeds = feeds.map { $0.reduce(action: action) }
