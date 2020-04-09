@@ -3,7 +3,6 @@ import SwiftUIKit
 public typealias ReduxSubscriberObject = ReduxSubscriberProtocol & NSObject
 
 public protocol ReduxSubscriberProtocol: NSObject {
-  /// Reacts to the `action`. Note that subscribers can filter action and choose whether to respond.
   func reduce(action: ReduxActionProtocol)
 }
 
@@ -22,7 +21,7 @@ open class ReduxSubscriber: NSObject, ReduxSubscriberProtocol {
   
   /// Reacts to the `action`. Note that subscribers can filter action and choose whether to respond.
   open func reduce(action: ReduxActionProtocol) {
-    assertionFailure("`\(#function)` should be overriden in subclass - `\(type(of: self))`.")
+    fatalError("`\(#function)` should be overriden in subclass - `\(type(of: self))`.")
   }
   
 }
