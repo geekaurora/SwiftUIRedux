@@ -9,7 +9,7 @@ struct FeedListView: View {
   
   var body: some View {
     return List {
-      ForEach(state.feeds) { feed in
+      ForEach(state.feeds, id: \.diffId) { feed in
         NavigationLink(destination: FeedDetailsView(feed: feed)) {
           FeedCell(feed: feed)
         }
