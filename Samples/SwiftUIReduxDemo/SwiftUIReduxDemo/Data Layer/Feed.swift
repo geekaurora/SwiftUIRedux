@@ -16,13 +16,19 @@ public struct Feed: Identifiable, Codable, Equatable, CustomStringConvertible {
   public var comments: [Comment]! {
     didSet { id = UUID() }
   }
-    
+  
   public init(feedId: Int, title: String, isLiked: Bool = false) {
     self.feedId = feedId
     self.title = title
     self.isLiked = isLiked
     
     self.comments = (0..<2).map { Comment(commentId: $0, title: "comment\(feedId)-\($0)")}
+  }
+  
+  public mutating func addComment() {
+    let commentId = comments.count
+    let comment = Comment(commentId: commentId, title: "comment\(feedId)-\(commentId)")
+    self.comments = comments + [comment]
   }
   
   // MARK: - Equatable
@@ -43,6 +49,10 @@ extension Feed: ReduxStateProtocol {
       //if feedId == action.feed.feedId {
       if feedId == action.feed.feedId {
         newFeed.isLiked = !action.feed.isLiked
+      }
+    case let action as FeedAddCommentAction:
+      if feedId == action.feed.feedId {
+        newFeed.addComment()
       }
     default:
       return self
