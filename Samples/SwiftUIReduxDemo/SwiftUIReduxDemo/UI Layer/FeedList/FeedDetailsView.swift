@@ -13,16 +13,6 @@ struct FeedDetailsView: View {
   var body: some View {
     print(state.feed)
     
-    return HStack {
-      Text(state.feed.title)
-        .modifier(ContentTextStyle())
-      
-      Spacer()
-      Button(action: {
-        dispatchLikeFeedAction(feed: self.state.feed)
-      }) {
-        Text(state.feed.isLiked ? "UnLike" : "Like")
-      }.modifier(NormalButtonStyle())
-    }
+    return FeedCell(feed: state.feed)
   }
 }

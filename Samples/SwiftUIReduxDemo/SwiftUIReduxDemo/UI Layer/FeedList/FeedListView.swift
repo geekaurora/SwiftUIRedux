@@ -24,7 +24,6 @@ struct FeedCell: View {
       }
             
       // Comment list
-      //Spacer(minLength: 5)
       CommentListView(comments: feed.comments)
     }
   }
