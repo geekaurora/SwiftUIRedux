@@ -21,22 +21,22 @@ public class ReduxRootStore {
   public func dispatch(action: ReduxActionProtocol) {
     // Notify all subscribers. Note that subscribers can filter action and choose whether to respond.
     subscribers.allObjects
-      .compactMap { ($0 as? ReduxSubscriber).assertIfNil }
+      .compactMap { ($0 as? ReduxSubscriberObject).assertIfNil }
       .forEach { $0.reduce(action: action) }
   }
   
   // MARK: - Subscribe
   
-  public func subscribe(_ subscriber: ReduxSubscriber) {
+  public func subscribe(_ subscriber: ReduxSubscriberObject) {
     guard !contains(subscriber) else { return }
     subscribers.add(subscriber)
   }
 
-  public func unsubscribe(_ subscriber: ReduxSubscriber) {
+  public func unsubscribe(_ subscriber: ReduxSubscriberObject) {
     subscribers.remove(subscriber)
   }
 
-  public func contains(_ subscriber: ReduxSubscriber) -> Bool {
+  public func contains(_ subscriber: ReduxSubscriberObject) -> Bool {
     return subscribers.contains(subscriber)
   }  
   
