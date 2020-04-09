@@ -30,9 +30,7 @@ struct CommentListView: View {
   var body: some View {
     return List {
       ForEach(state.comments) { comment in
-        NavigationLink(destination: CommentDetailsView(comment: comment)) {
           CommentCell(comment: comment)
-        }
       }
     }
     

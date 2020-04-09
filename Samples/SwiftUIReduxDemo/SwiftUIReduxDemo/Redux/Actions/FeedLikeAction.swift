@@ -18,3 +18,11 @@ func dispatchLikeFeedAction(feed: Feed) {
   dispatch(action: FeedLikeAction(feed: feed))
 }
 
+struct CommentLikeAction: ReduxActionProtocol {
+  let comment: Comment
+}
+
+func dispatchLikeCommentAction(comment: Comment) {
+  dispatch(action: CommentLikeAction(comment: comment))
+}
+
