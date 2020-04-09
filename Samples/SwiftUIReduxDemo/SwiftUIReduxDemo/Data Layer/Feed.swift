@@ -1,7 +1,19 @@
 import SwiftUIRedux
 import CZUtils
 
-public struct Feed: Codable, Equatable, CustomStringConvertible {
+public protocol ListDiffable {
+  var diffId: UUID { get set}
+  mutating func updateDiffId()
+}
+
+public extension ListDiffable {
+  /// Updates `diffId` to trigger list reload.
+  mutating func updateDiffId() {
+    self.diffId = UUID()
+  }
+}
+
+public struct Feed: ListDiffable, Codable, Equatable, CustomStringConvertible {
   static var mocks = (0..<10).map {
     Feed(feedId: $0, title: "feed\($0)")
   }
@@ -10,11 +22,11 @@ public struct Feed: Codable, Equatable, CustomStringConvertible {
   public var feedId: Int
   public let title: String
   public var isLiked: Bool {
-    didSet { diffId = UUID() }
+    didSet { updateDiffId() }
   }
   
   public var comments: [Comment] = [] {
-    didSet { diffId = UUID() }
+    didSet { updateDiffId() }
   }
   
   public init(feedId: Int, title: String, isLiked: Bool = false) {
