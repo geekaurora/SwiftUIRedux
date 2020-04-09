@@ -15,8 +15,6 @@
 		C3C9F70F243B3DBC005ED324 /* Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F70B243B3DBC005ED324 /* Subscriber.swift */; };
 		C3C9F710243B3DBC005ED324 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F70C243B3DBC005ED324 /* Action.swift */; };
 		C3C9F711243B3DBC005ED324 /* RootStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F70D243B3DBC005ED324 /* RootStore.swift */; };
-		C3D67E4A243F4D62008A54ED /* CZUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D67E43243F4D54008A54ED /* CZUtils.framework */; };
-		C3D67E4B243F4D65008A54ED /* SwiftUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D67E38243F4D50008A54ED /* SwiftUIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,48 +24,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = C3C9F695243B3B4B005ED324;
 			remoteInfo = SwiftUIRedux;
-		};
-		C3D67E37243F4D50008A54ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3D67E32243F4D50008A54ED /* SwiftUIKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DF94EB8A2415FEC500630182;
-			remoteInfo = SwiftUIKit;
-		};
-		C3D67E39243F4D50008A54ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3D67E32243F4D50008A54ED /* SwiftUIKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DF94EB932415FEC500630182;
-			remoteInfo = SwiftUIKitTests;
-		};
-		C3D67E42243F4D54008A54ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3D67E3B243F4D54008A54ED /* CZUtils.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "CZUtils::CZUtils::Product";
-			remoteInfo = CZUtils;
-		};
-		C3D67E44243F4D54008A54ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3D67E3B243F4D54008A54ED /* CZUtils.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "CZUtils::CZUtilsTests::Product";
-			remoteInfo = CZUtilsTests;
-		};
-		C3D67E46243F4D58008A54ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3D67E3B243F4D54008A54ED /* CZUtils.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "CZUtils::CZUtils";
-			remoteInfo = CZUtils;
-		};
-		C3D67E48243F4D5B008A54ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3D67E32243F4D50008A54ED /* SwiftUIKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = DF94EB892415FEC500630182;
-			remoteInfo = SwiftUIKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -83,8 +39,6 @@
 		C3C9F70B243B3DBC005ED324 /* Subscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriber.swift; sourceTree = "<group>"; };
 		C3C9F70C243B3DBC005ED324 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		C3C9F70D243B3DBC005ED324 /* RootStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootStore.swift; sourceTree = "<group>"; };
-		C3D67E32243F4D50008A54ED /* SwiftUIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftUIKit.xcodeproj; path = ../../SwiftUIKit/SwiftUIKit/SwiftUIKit.xcodeproj; sourceTree = "<group>"; };
-		C3D67E3B243F4D54008A54ED /* CZUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CZUtils.xcodeproj; path = ../../CZUtils/CZUtils.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3D67E4B243F4D65008A54ED /* SwiftUIKit.framework in Frameworks */,
-				C3D67E4A243F4D62008A54ED /* CZUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,8 +79,6 @@
 		C3C9F68C243B3B4B005ED324 = {
 			isa = PBXGroup;
 			children = (
-				C3D67E3B243F4D54008A54ED /* CZUtils.xcodeproj */,
-				C3D67E32243F4D50008A54ED /* SwiftUIKit.xcodeproj */,
 				C3C9F698243B3B4B005ED324 /* SwiftUIRedux */,
 				C3C9F6A3243B3B4B005ED324 /* SwiftUIReduxTests */,
 				C3C9F697243B3B4B005ED324 /* Products */,
@@ -167,24 +117,6 @@
 			path = SwiftUIReduxTests;
 			sourceTree = "<group>";
 		};
-		C3D67E33243F4D50008A54ED /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C3D67E38243F4D50008A54ED /* SwiftUIKit.framework */,
-				C3D67E3A243F4D50008A54ED /* SwiftUIKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C3D67E3C243F4D54008A54ED /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C3D67E43243F4D54008A54ED /* CZUtils.framework */,
-				C3D67E45243F4D54008A54ED /* CZUtilsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -211,8 +143,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				C3D67E49243F4D5B008A54ED /* PBXTargetDependency */,
-				C3D67E47243F4D58008A54ED /* PBXTargetDependency */,
 			);
 			name = SwiftUIRedux;
 			productName = SwiftUIRedux;
@@ -267,16 +197,6 @@
 			mainGroup = C3C9F68C243B3B4B005ED324;
 			productRefGroup = C3C9F697243B3B4B005ED324 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C3D67E3C243F4D54008A54ED /* Products */;
-					ProjectRef = C3D67E3B243F4D54008A54ED /* CZUtils.xcodeproj */;
-				},
-				{
-					ProductGroup = C3D67E33243F4D50008A54ED /* Products */;
-					ProjectRef = C3D67E32243F4D50008A54ED /* SwiftUIKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				C3C9F695243B3B4B005ED324 /* SwiftUIRedux */,
@@ -284,37 +204,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		C3D67E38243F4D50008A54ED /* SwiftUIKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftUIKit.framework;
-			remoteRef = C3D67E37243F4D50008A54ED /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C3D67E3A243F4D50008A54ED /* SwiftUIKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiftUIKitTests.xctest;
-			remoteRef = C3D67E39243F4D50008A54ED /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C3D67E43243F4D54008A54ED /* CZUtils.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CZUtils.framework;
-			remoteRef = C3D67E42243F4D54008A54ED /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C3D67E45243F4D54008A54ED /* CZUtilsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = file;
-			path = CZUtilsTests.xctest;
-			remoteRef = C3D67E44243F4D54008A54ED /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C3C9F694243B3B4B005ED324 /* Resources */ = {
@@ -361,16 +250,6 @@
 			isa = PBXTargetDependency;
 			target = C3C9F695243B3B4B005ED324 /* SwiftUIRedux */;
 			targetProxy = C3C9F6A1243B3B4B005ED324 /* PBXContainerItemProxy */;
-		};
-		C3D67E47243F4D58008A54ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CZUtils;
-			targetProxy = C3D67E46243F4D58008A54ED /* PBXContainerItemProxy */;
-		};
-		C3D67E49243F4D5B008A54ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftUIKit;
-			targetProxy = C3D67E48243F4D5B008A54ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -4,6 +4,6 @@ import SwiftUIKit
 public protocol ReduxActionProtocol {}
 
 /// Redux Action that triggers UI reload.
-public class ReduxReloadAction: ReduxActionProtocol {
-  public init() {}
-}
+//public class ReduxReloadAction: ReduxActionProtocol {
+//  public init() {}
+//}
