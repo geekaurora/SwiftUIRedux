@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftUIRedux
 import CZUtils
 
-public class FeedListState: Subscriber, ObservableObject {
+public class FeedListState: ReduxSubscriber, ObservableObject {
   static let feedEndpoint = "http://instagram.com/feeds"
   
   @Published var feeds: [Feed] = []

@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftUIRedux
 import CZUtils
 
-class NotificationListState: Subscriber, ObservableObject {
+class NotificationListState: ReduxSubscriber, ObservableObject {
   
   @Published var notifications: [Notification] = Notification.mocks
   

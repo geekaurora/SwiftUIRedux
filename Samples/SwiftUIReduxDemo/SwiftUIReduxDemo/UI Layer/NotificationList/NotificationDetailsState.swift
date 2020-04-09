@@ -3,7 +3,7 @@ import SwiftUIKit
 import SwiftUIRedux
 import CZUtils
 
-class NotificationDetailsState: Subscriber, ObservableObject {
+class NotificationDetailsState: ReduxSubscriber, ObservableObject {
   @Published var notification: Notification
   
   init(notification: Notification) {

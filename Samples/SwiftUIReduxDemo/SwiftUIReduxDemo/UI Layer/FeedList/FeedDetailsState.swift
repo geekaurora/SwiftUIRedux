@@ -3,7 +3,7 @@ import SwiftUIKit
 import SwiftUIRedux
 import CZUtils
 
-class FeedDetailsState: Subscriber, ObservableObject {
+class FeedDetailsState: ReduxSubscriber, ObservableObject {
   @Published var feed: Feed
   
   init(feed: Feed) {

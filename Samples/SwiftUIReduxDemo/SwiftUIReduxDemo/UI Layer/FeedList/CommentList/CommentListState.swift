@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftUIRedux
 import CZUtils
 
-public class CommentListState: Subscriber, ObservableObject {
+public class CommentListState: ReduxSubscriber, ObservableObject {
   
   @Published var comments: [Comment] = []
   
