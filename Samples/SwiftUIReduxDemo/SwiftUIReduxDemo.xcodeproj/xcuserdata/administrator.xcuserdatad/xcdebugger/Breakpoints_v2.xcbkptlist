@@ -30,8 +30,8 @@
             filePath = "SwiftUIReduxDemo/Data Layer/Feed.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "reduce(action:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,26 +142,10 @@
             filePath = "SwiftUIReduxDemo/Data Layer/Feed.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "reduce(action:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C7EB3487-F546-429F-A8EE-321CB9DD5FE2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftUIReduxDemo/Data Layer/Feed.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "isLiked"
-            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

@@ -7,10 +7,12 @@ class Services {
   func fetchFeeds(endPoint: String,
                   params: [String: AnyObject] = [:],
                   completion: @escaping ([Feed]) -> Void) {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-      let feeds = Feed.mocks
-      completion(feeds)
-    }
+    completion(Feed.mocks)
+    
+    //    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+    //      let feeds = Feed.mocks
+    //      completion(feeds)
+    //    }
   }
   
 }

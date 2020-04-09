@@ -1,17 +1,6 @@
+import SwiftUIKit
 import SwiftUIRedux
 import CZUtils
-
-public protocol ListDiffable {
-  var diffId: UUID { get set}
-  mutating func updateDiffId()
-}
-
-public extension ListDiffable {
-  /// Updates `diffId` to trigger list reload.
-  mutating func updateDiffId() {
-    self.diffId = UUID()
-  }
-}
 
 public struct Feed: ListDiffable, Codable, Equatable, CustomStringConvertible {
   static var mocks = (0..<10).map {
@@ -21,9 +10,7 @@ public struct Feed: ListDiffable, Codable, Equatable, CustomStringConvertible {
   public var diffId = UUID()
   public var feedId: Int
   public let title: String
-  public var isLiked: Bool {
-    didSet { updateDiffId() }
-  }
+  public var isLiked: Bool { didSet { updateDiffId() } }
   
   public var comments: [Comment] = [] {
     didSet { updateDiffId() }
