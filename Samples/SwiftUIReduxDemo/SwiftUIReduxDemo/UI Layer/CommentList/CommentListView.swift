@@ -5,6 +5,7 @@ import CZUtils
 
 struct CommentCell: View {
   let comment: Comment
+  
   var body: some View {
     HStack {
       Text(comment.title)
@@ -13,7 +14,7 @@ struct CommentCell: View {
       Spacer()
       Button(action: {
         print("tapped like.")
-        dispatchLikeCommentAction(comment: self.comment)
+        dispatch(action: CommentLikeAction(comment: self.comment))
       }) {
         Text(comment.isLiked ? "UnLike" : "Like")
       }

@@ -25,7 +25,7 @@
 		C37B6015243B64E200F69EC1 /* SwiftUIRedux.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3C9F6F2243B3C35005ED324 /* SwiftUIRedux.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C397F685243C816A003DF1CE /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F684243C816A003DF1CE /* Styles.swift */; };
 		C397F696243CAA8F003DF1CE /* FeedDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F695243CAA8F003DF1CE /* FeedDetailsView.swift */; };
-		C397F69A243CAAB4003DF1CE /* FeedLikeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F699243CAAB4003DF1CE /* FeedLikeAction.swift */; };
+		C397F69A243CAAB4003DF1CE /* FeedActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F699243CAAB4003DF1CE /* FeedActions.swift */; };
 		C397F69F243CAD1A003DF1CE /* FeedDetailsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F69E243CAD1A003DF1CE /* FeedDetailsState.swift */; };
 		C397F6A2243CAD42003DF1CE /* NotificationDetailsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F6A0243CAD42003DF1CE /* NotificationDetailsState.swift */; };
 		C397F6A3243CAD42003DF1CE /* NotificationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F6A1243CAD42003DF1CE /* NotificationDetailsView.swift */; };
@@ -108,7 +108,7 @@
 		C37B6011243B64DF00F69EC1 /* SwiftUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C397F684243C816A003DF1CE /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		C397F695243CAA8F003DF1CE /* FeedDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDetailsView.swift; sourceTree = "<group>"; };
-		C397F699243CAAB4003DF1CE /* FeedLikeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLikeAction.swift; sourceTree = "<group>"; };
+		C397F699243CAAB4003DF1CE /* FeedActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedActions.swift; sourceTree = "<group>"; };
 		C397F69E243CAD1A003DF1CE /* FeedDetailsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailsState.swift; sourceTree = "<group>"; };
 		C397F6A0243CAD42003DF1CE /* NotificationDetailsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDetailsState.swift; sourceTree = "<group>"; };
 		C397F6A1243CAD42003DF1CE /* NotificationDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDetailsView.swift; sourceTree = "<group>"; };
@@ -238,7 +238,7 @@
 		C397F698243CAAA5003DF1CE /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				C397F699243CAAB4003DF1CE /* FeedLikeAction.swift */,
+				C397F699243CAAB4003DF1CE /* FeedActions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -492,7 +492,7 @@
 				C3C9F6BD243B3BF5005ED324 /* AppDelegate.swift in Sources */,
 				C37B5FF4243B511500F69EC1 /* Feed.swift in Sources */,
 				C3672BEC243EE92C0050689B /* CommentListState.swift in Sources */,
-				C397F69A243CAAB4003DF1CE /* FeedLikeAction.swift in Sources */,
+				C397F69A243CAAB4003DF1CE /* FeedActions.swift in Sources */,
 				C37B5FFB243B5FA800F69EC1 /* Notification.swift in Sources */,
 				C3C9F6BF243B3BF6005ED324 /* SceneDelegate.swift in Sources */,
 				C397F6A3243CAD42003DF1CE /* NotificationDetailsView.swift in Sources */,

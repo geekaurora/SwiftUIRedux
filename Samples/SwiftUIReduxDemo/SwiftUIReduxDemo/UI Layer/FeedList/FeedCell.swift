@@ -16,7 +16,7 @@ struct FeedCell: View {
         Spacer()
         Button(action: {
           print("tapped like.")
-          dispatchLikeFeedAction(feed: self.feed)
+          dispatch(action: FeedLikeAction(feed: self.feed))
         }) {
           Text(feed.isLiked ? "UnLike" : "Like")
         }

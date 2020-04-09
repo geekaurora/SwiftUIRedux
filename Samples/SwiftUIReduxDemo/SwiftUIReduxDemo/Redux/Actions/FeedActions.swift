@@ -3,7 +3,13 @@ import SwiftUIKit
 import SwiftUIRedux
 import CZUtils
 
+// MARK: - Feed
+
 struct FeedLikeAction: ReduxActionProtocol {
+  let feed: Feed
+}
+
+struct FeedAddCommentAction: ReduxActionProtocol {
   let feed: Feed
 }
 
@@ -18,11 +24,9 @@ func dispatchLikeFeedAction(feed: Feed) {
   dispatch(action: FeedLikeAction(feed: feed))
 }
 
+// MARK: - Comment
+
 struct CommentLikeAction: ReduxActionProtocol {
   let comment: Comment
-}
-
-func dispatchLikeCommentAction(comment: Comment) {
-  dispatch(action: CommentLikeAction(comment: comment))
 }
 
