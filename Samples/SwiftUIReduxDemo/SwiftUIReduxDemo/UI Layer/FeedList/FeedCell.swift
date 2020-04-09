@@ -7,7 +7,6 @@ struct FeedCell: View {
   let feed: Feed
   
   var body: some View {
-    
     VStack {
       HStack {
         // Title text
@@ -20,7 +19,7 @@ struct FeedCell: View {
         Button(action: {
           print("tapped AddComment.")
           dispatch(action: FeedAddCommentAction(feed: self.feed))
-        }) { 
+        }) {
           Text("Comment")
         }
         .modifier(NormalButtonStyle())
