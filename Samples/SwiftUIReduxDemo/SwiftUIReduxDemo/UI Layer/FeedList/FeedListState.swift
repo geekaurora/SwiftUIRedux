@@ -2,37 +2,14 @@ import SwiftUI
 import SwiftUIRedux
 import CZUtils
 
-class ThunkMiddleware: Subscriber {
-  
-  public override func reduce(action: ReduxActionProtocol) {
-    switch action {
-    case let command as FetchFeedsCommand:
-      Services.shared.fetchFeeds(endPoint: command.endPoint) { feeds in
-        // Dispatch `FetchFeedsResultAction` on completion of fetchFeeds.
-        dispatch(action: FetchFeedsResultAction(feeds: feeds, error: nil))
-      }
-      break
-    default:
-      break
-    }
-  }
-}
-
 public class FeedListState: Subscriber, ObservableObject {
-
-  @Published var feeds: [Feed] = []
-  
   static let feedEndpoint = "http://instagram.com/feeds"
   
-  var thunkMiddleware = ThunkMiddleware()
-  
+  @Published var feeds: [Feed] = []
+    
   public override init() {
     super.init()    
-    // Dispatch asynchronous Command - fetch feeds.
-    // dispatch(action: FetchFeedsCommand(endPoint: Self.feedEndpoint))
-    
     Services.shared.fetchFeeds(endPoint: Self.feedEndpoint) { feeds in
-      // Dispatch `FetchFeedsResultAction` on completion of fetchFeeds.
       dispatch(action: FetchFeedsResultAction(feeds: feeds, error: nil))
     }
   }
@@ -52,8 +29,6 @@ public class FeedListState: Subscriber, ObservableObject {
       // No need of deep copy, SwiftUI decides wether to reload by List diff.
       feeds = feeds.map { $0.reduce(action: action) }
     }
-    
-    
 
   }
   

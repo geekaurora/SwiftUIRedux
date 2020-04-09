@@ -30,7 +30,6 @@
 		C397F69F243CAD1A003DF1CE /* FeedDetailsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F69E243CAD1A003DF1CE /* FeedDetailsState.swift */; };
 		C397F6A2243CAD42003DF1CE /* NotificationDetailsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F6A0243CAD42003DF1CE /* NotificationDetailsState.swift */; };
 		C397F6A3243CAD42003DF1CE /* NotificationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F6A1243CAD42003DF1CE /* NotificationDetailsView.swift */; };
-		C3A3D3CF243F1184001D9BFE /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A3D3CE243F1184001D9BFE /* Command.swift */; };
 		C3C9F6BD243B3BF5005ED324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F6BC243B3BF5005ED324 /* AppDelegate.swift */; };
 		C3C9F6BF243B3BF6005ED324 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F6BE243B3BF6005ED324 /* SceneDelegate.swift */; };
 		C3C9F6C1243B3BF6005ED324 /* FeedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9F6C0243B3BF6005ED324 /* FeedListView.swift */; };
@@ -115,7 +114,6 @@
 		C397F69E243CAD1A003DF1CE /* FeedDetailsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailsState.swift; sourceTree = "<group>"; };
 		C397F6A0243CAD42003DF1CE /* NotificationDetailsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDetailsState.swift; sourceTree = "<group>"; };
 		C397F6A1243CAD42003DF1CE /* NotificationDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDetailsView.swift; sourceTree = "<group>"; };
-		C3A3D3CE243F1184001D9BFE /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		C3C9F6B9243B3BF5005ED324 /* SwiftUIReduxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIReduxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9F6BC243B3BF5005ED324 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3C9F6BE243B3BF6005ED324 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				C397F699243CAAB4003DF1CE /* Action.swift */,
-				C3A3D3CE243F1184001D9BFE /* Command.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -519,7 +516,6 @@
 				C397F69F243CAD1A003DF1CE /* FeedDetailsState.swift in Sources */,
 				C37B5FFF243B617D00F69EC1 /* NotificationListState.swift in Sources */,
 				C397F6A2243CAD42003DF1CE /* NotificationDetailsState.swift in Sources */,
-				C3A3D3CF243F1184001D9BFE /* Command.swift in Sources */,
 				C37B6006243B623D00F69EC1 /* TabsView.swift in Sources */,
 				C3C9F6C1243B3BF6005ED324 /* FeedListView.swift in Sources */,
 				C37B6001243B619600F69EC1 /* FeedListState.swift in Sources */,

@@ -174,8 +174,8 @@
             filePath = "SwiftUIReduxDemo/UI Layer/FeedList/FeedListState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "reduce(action:)"
             landmarkType = "7">
          </BreakpointContent>
