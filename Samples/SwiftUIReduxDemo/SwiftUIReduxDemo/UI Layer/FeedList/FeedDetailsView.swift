@@ -11,8 +11,7 @@ struct FeedDetailsView: View {
   }
   
   var body: some View {
-    print(state.feed)
-    
+    print(state.feed)    
     return FeedCell(feed: state.feed)
   }
 }

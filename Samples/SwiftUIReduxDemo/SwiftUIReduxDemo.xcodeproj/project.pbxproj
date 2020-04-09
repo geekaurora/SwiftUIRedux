@@ -10,6 +10,7 @@
 		C3672BEB243EE92C0050689B /* CommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3672BE9243EE92C0050689B /* CommentListView.swift */; };
 		C3672BEC243EE92C0050689B /* CommentListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3672BEA243EE92C0050689B /* CommentListState.swift */; };
 		C3672BEE243EE9940050689B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3672BED243EE9940050689B /* Comment.swift */; };
+		C3672BF0243F06490050689B /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3672BEF243F06490050689B /* FeedCell.swift */; };
 		C37B5FF4243B511500F69EC1 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37B5FF3243B511500F69EC1 /* Feed.swift */; };
 		C37B5FF8243B5F1900F69EC1 /* NotificationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37B5FF6243B5F1900F69EC1 /* NotificationListView.swift */; };
 		C37B5FFB243B5FA800F69EC1 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37B5FFA243B5FA800F69EC1 /* Notification.swift */; };
@@ -96,6 +97,7 @@
 		C3672BE9243EE92C0050689B /* CommentListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListView.swift; sourceTree = "<group>"; };
 		C3672BEA243EE92C0050689B /* CommentListState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListState.swift; sourceTree = "<group>"; };
 		C3672BED243EE9940050689B /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		C3672BEF243F06490050689B /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		C37B5FF3243B511500F69EC1 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		C37B5FF6243B5F1900F69EC1 /* NotificationListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListView.swift; sourceTree = "<group>"; };
 		C37B5FFA243B5FA800F69EC1 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		C37B5FFC243B615B00F69EC1 /* FeedList */ = {
 			isa = PBXGroup;
 			children = (
+				C3672BEF243F06490050689B /* FeedCell.swift */,
 				C3C9F6C0243B3BF6005ED324 /* FeedListView.swift */,
 				C37B6000243B619600F69EC1 /* FeedListState.swift */,
 				C397F695243CAA8F003DF1CE /* FeedDetailsView.swift */,
@@ -497,6 +500,7 @@
 				C37B5FF8243B5F1900F69EC1 /* NotificationListView.swift in Sources */,
 				C397F696243CAA8F003DF1CE /* FeedDetailsView.swift in Sources */,
 				C3672BEB243EE92C0050689B /* CommentListView.swift in Sources */,
+				C3672BF0243F06490050689B /* FeedCell.swift in Sources */,
 				C397F69F243CAD1A003DF1CE /* FeedDetailsState.swift in Sources */,
 				C37B5FFF243B617D00F69EC1 /* NotificationListState.swift in Sources */,
 				C397F6A2243CAD42003DF1CE /* NotificationDetailsState.swift in Sources */,
