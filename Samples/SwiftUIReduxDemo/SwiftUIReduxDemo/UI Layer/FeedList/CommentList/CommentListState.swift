@@ -4,7 +4,7 @@ import CZUtils
 
 public class CommentListState: Subscriber, ObservableObject {
   
-  @Published var comments: [Comment] = Comment.mocks
+  @Published var comments: [Comment] = []
   
   public override func reduce(action: ReduxActionProtocol) {
     // No need of deep copy, SwiftUI decides wether to reload by List diff.

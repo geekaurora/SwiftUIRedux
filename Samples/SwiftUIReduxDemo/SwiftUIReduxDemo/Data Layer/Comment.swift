@@ -1,9 +1,7 @@
 import SwiftUIRedux
 import CZUtils
 
-public struct Comment: Identifiable, Codable, Equatable, CustomStringConvertible {
-  static var mocks = (0..<10).map { Comment(commentId: $0, title: "comment\($0)") }
-  
+public struct Comment: Identifiable, Codable, Equatable, CustomStringConvertible {  
   public var id = UUID()
   public var commentId: Int
   public let title: String

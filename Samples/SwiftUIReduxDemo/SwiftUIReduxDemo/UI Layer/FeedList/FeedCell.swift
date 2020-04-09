@@ -21,8 +21,7 @@ struct FeedCell: View {
           dispatch(action: FeedAddCommentAction(feed: self.feed))
         }) {
           Text("Comment")
-        }
-        .modifier(NormalButtonStyle())
+        }.modifier(NormalButtonStyle())
         
         // Like button
         Button(action: {
@@ -30,8 +29,7 @@ struct FeedCell: View {
           dispatch(action: FeedLikeAction(feed: self.feed))
         }) {
           Text(feed.isLiked ? "UnLike" : "Like")
-        }
-        .modifier(NormalButtonStyle())
+        }.modifier(NormalButtonStyle())
       }
             
       // Comment list
