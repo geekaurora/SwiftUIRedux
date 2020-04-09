@@ -2,18 +2,33 @@ import SwiftUI
 import SwiftUIRedux
 import CZUtils
 
-public class FeedListState: Subscriber, ObservableObject {
+class ThunkMiddleware: Subscriber {
   
-  //@Published var feeds: [Feed] = Feed.mocks
+  public override func reduce(action: ReduxActionProtocol) {
+    switch action {
+    case let command as FetchFeedsCommand:
+      Services.shared.fetchFeeds(endPoint: command.endPoint) { feeds in
+        //self.feeds = feeds
+      }
+      break
+    default:
+      break
+    }
+  }
+}
+
+public class FeedListState: Subscriber, ObservableObject {
+
   @Published var feeds: [Feed] = []
   
+  static let feedEndpoint = "http://instagram.com/feeds"
+  
+  var thunkMiddleware = ThunkMiddleware()
+  
   public override init() {
-    super.init()
-    
-    // Asynchronous Command - fetch feeds.
-    Services.shared.fetchFeeds { feeds in
-      self.feeds = feeds
-    }
+    super.init()    
+    // Dispatch asynchronous Command - fetch feeds.
+    dispatch(action: FetchFeedsCommand(endPoint: Self.feedEndpoint))
   }
   
   public override func reduce(action: ReduxActionProtocol) {
