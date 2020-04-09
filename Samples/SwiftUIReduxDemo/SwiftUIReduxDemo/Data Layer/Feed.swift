@@ -22,11 +22,9 @@ public struct Feed: Identifiable, Codable, Equatable, CustomStringConvertible {
   public static func == (lhs: Feed, rhs: Feed) -> Bool {
     return lhs.isEqual(toCodable: rhs)
   }
-  
 }
 
 extension Feed: ReduxStateProtocol {
-  
   @discardableResult
   public func reduce(action: ReduxActionProtocol) -> Self {
     var newFeed = self
@@ -43,5 +41,4 @@ extension Feed: ReduxStateProtocol {
     }
     return newFeed
   }
-  
 }
