@@ -13,7 +13,7 @@ public struct Feed: Identifiable, Codable, Equatable, CustomStringConvertible {
     didSet { id = UUID() }
   }
   
-  public var comments: [Comment]! {
+  public var comments: [Comment] = [] {
     didSet { id = UUID() }
   }
   
@@ -21,8 +21,8 @@ public struct Feed: Identifiable, Codable, Equatable, CustomStringConvertible {
     self.feedId = feedId
     self.title = title
     self.isLiked = isLiked
-    
-    self.comments = (0..<2).map { Comment(commentId: $0, title: "comment\(feedId)-\($0)")}
+    //self.comments = (0..<1).map { Comment(commentId: $0, title: "comment\(feedId)-\($0)")}
+    self.addComment()
   }
   
   public mutating func addComment() {

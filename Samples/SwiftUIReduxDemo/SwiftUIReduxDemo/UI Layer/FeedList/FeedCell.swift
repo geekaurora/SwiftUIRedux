@@ -21,7 +21,7 @@ struct FeedCell: View {
           print("tapped AddComment.")
           dispatch(action: FeedAddCommentAction(feed: self.feed))
         }) {
-          Text("Add Comment")
+          Text("Comment")
         }
         .modifier(NormalButtonStyle())
         
