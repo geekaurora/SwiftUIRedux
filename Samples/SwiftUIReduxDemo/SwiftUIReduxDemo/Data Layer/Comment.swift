@@ -29,7 +29,6 @@ extension Comment: ReduxStateProtocol {
     
     switch action {
     case let action as CommentLikeAction:
-      // Update corresponding comment `isLiked`, and then reload UI by set `self.comments`.
       if commentId == action.comment.commentId {
         newComment.isLiked = !action.comment.isLiked
       }

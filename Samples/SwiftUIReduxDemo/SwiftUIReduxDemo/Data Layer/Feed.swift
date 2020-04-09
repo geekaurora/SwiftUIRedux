@@ -26,7 +26,7 @@ public struct Feed: Identifiable, Codable, Equatable, CustomStringConvertible {
   
   public mutating func addComment() {
     let commentId = feedId * 1000 + comments.count
-    let comment = Comment(commentId: commentId, title: "comment\(commentId)")
+    let comment = Comment(commentId: commentId, title: "comment\(comments.count)")
     self.comments = comments + [comment]
   }
   
