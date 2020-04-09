@@ -13,7 +13,7 @@ public protocol ReduxSubscriberProtocol: NSObject {
 /// Redux subscriber is normal RootState of RootView for each feature which is equivalant to FeatureViewController.
 open class ReduxSubscriber: NSObject, ReduxSubscriberProtocol {
   
-  public override init() {
+  required public override init() {
     super.init()
     
     // Subscribes to the root store, and it will unsubscribe itself automatically when deinit.
