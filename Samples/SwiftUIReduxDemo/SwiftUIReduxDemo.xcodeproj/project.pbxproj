@@ -179,6 +179,7 @@
 		C37B5FFC243B615B00F69EC1 /* FeedList */ = {
 			isa = PBXGroup;
 			children = (
+				C3672BE7243EE9140050689B /* CommentList */,
 				C3672BEF243F06490050689B /* FeedCell.swift */,
 				C3C9F6C0243B3BF6005ED324 /* FeedListView.swift */,
 				C37B6000243B619600F69EC1 /* FeedListState.swift */,
@@ -202,7 +203,6 @@
 		C37B6007243B640400F69EC1 /* UI Layer */ = {
 			isa = PBXGroup;
 			children = (
-				C3672BE7243EE9140050689B /* CommentList */,
 				C37B5FFC243B615B00F69EC1 /* FeedList */,
 				C37B5FFD243B616200F69EC1 /* NotificationList */,
 				C37B6005243B623D00F69EC1 /* TabsView.swift */,
