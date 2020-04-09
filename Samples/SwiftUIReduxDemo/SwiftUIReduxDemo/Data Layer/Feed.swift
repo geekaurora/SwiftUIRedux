@@ -2,7 +2,9 @@ import SwiftUIRedux
 import CZUtils
 
 public struct Feed: Identifiable, Codable, Equatable, CustomStringConvertible {
-  static var mocks = (0..<10).map { Feed(feedId: $0, title: "feed\($0)") }
+  static var mocks = (0..<10).map {
+    Feed(feedId: $0, title: "feed\($0)")
+  }
   
   public var id = UUID()
   public var feedId: Int
@@ -11,10 +13,16 @@ public struct Feed: Identifiable, Codable, Equatable, CustomStringConvertible {
     didSet { id = UUID() }
   }
   
+  public var comments: [Comment]! {
+    didSet { id = UUID() }
+  }
+    
   public init(feedId: Int, title: String, isLiked: Bool = false) {
     self.feedId = feedId
     self.title = title
     self.isLiked = isLiked
+    
+    self.comments = (0..<2).map { Comment(commentId: $0, title: "Comment\(feedId)-\($0)")}
   }
   
   // MARK: - Equatable

@@ -24,15 +24,13 @@ struct CommentCell: View {
 }
 
 struct CommentListView: View {
-  @ObservedObject
-  var state = CommentListState()
+  var comments: [Comment]
   
   var body: some View {
-    return List {
-      ForEach(state.comments) { comment in
+    return VStack {
+      ForEach(comments) { comment in
           CommentCell(comment: comment)
       }
     }
-    
   }
 }
