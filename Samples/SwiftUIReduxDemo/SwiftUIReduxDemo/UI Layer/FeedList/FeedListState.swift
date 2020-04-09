@@ -29,7 +29,12 @@ public class FeedListState: Subscriber, ObservableObject {
   public override init() {
     super.init()    
     // Dispatch asynchronous Command - fetch feeds.
-    dispatch(action: FetchFeedsCommand(endPoint: Self.feedEndpoint))
+    // dispatch(action: FetchFeedsCommand(endPoint: Self.feedEndpoint))
+    
+    Services.shared.fetchFeeds(endPoint: Self.feedEndpoint) { feeds in
+      // Dispatch `FetchFeedsResultAction` on completion of fetchFeeds.
+      dispatch(action: FetchFeedsResultAction(feeds: feeds, error: nil))
+    }
   }
   
   public override func reduce(action: ReduxActionProtocol) {
