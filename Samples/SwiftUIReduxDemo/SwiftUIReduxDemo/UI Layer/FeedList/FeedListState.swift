@@ -8,7 +8,8 @@ class ThunkMiddleware: Subscriber {
     switch action {
     case let command as FetchFeedsCommand:
       Services.shared.fetchFeeds(endPoint: command.endPoint) { feeds in
-        //self.feeds = feeds
+        // Dispatch `FetchFeedsResultAction` on completion of fetchFeeds.
+        dispatch(action: FetchFeedsResultAction(feeds: feeds, error: nil))
       }
       break
     default:
@@ -32,8 +33,23 @@ public class FeedListState: Subscriber, ObservableObject {
   }
   
   public override func reduce(action: ReduxActionProtocol) {
-    // No need of deep copy, SwiftUI decides wether to reload by List diff.
-    feeds = feeds.map { $0.reduce(action: action) }
+    
+    switch action {
+    case let fetchFeedsResultAction as FetchFeedsResultAction:
+      // Action with fetch feeds results.
+      guard let feeds = fetchFeedsResultAction.feeds else {
+        assertionFailure("Failed to fetch feeds. Error - \(fetchFeedsResultAction.error).")
+        return
+      }
+      self.feeds = feeds
+      break
+    default:
+      // No need of deep copy, SwiftUI decides wether to reload by List diff.
+      feeds = feeds.map { $0.reduce(action: action) }
+    }
+    
+    
+
   }
   
 }
