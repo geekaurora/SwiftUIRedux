@@ -12,6 +12,10 @@ struct FeedDetailsView: View {
   
   var body: some View {
     print(state.feed)    
-    return FeedCell(feed: state.feed)
+    return      
+      VStack {
+        FeedCell(feed: state.feed)
+        Spacer()
+    }
   }
 }

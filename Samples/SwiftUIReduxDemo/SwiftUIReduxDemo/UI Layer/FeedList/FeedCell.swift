@@ -25,6 +25,7 @@ struct FeedCell: View {
             
       // Comment list
       CommentListView(comments: feed.comments)
+      Spacer()
     }
   }
   
