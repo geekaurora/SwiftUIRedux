@@ -17,6 +17,13 @@ struct ContentTextStyle: ViewModifier {
   }
 }
 
+struct CommentTextStyle: ViewModifier {
+  func body(content: Content) -> some View {
+    content
+      .foregroundColor(Color(white: 0.35))
+  }
+}
+
 // MARK: - Button
 
 struct NormalButtonStyle: ViewModifier {

@@ -22,7 +22,7 @@ public struct Feed: Identifiable, Codable, Equatable, CustomStringConvertible {
     self.title = title
     self.isLiked = isLiked
     
-    self.comments = (0..<2).map { Comment(commentId: $0, title: "Comment\(feedId)-\($0)")}
+    self.comments = (0..<2).map { Comment(commentId: $0, title: "comment\(feedId)-\($0)")}
   }
   
   // MARK: - Equatable

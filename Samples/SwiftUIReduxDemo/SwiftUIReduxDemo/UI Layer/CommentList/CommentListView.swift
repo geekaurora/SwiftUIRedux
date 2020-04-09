@@ -8,7 +8,7 @@ struct CommentCell: View {
   var body: some View {
     HStack {
       Text(comment.title)
-        .modifier(ContentTextStyle())
+        .modifier(CommentTextStyle())
       
       Spacer()
       Button(action: {
@@ -28,9 +28,11 @@ struct CommentListView: View {
   
   var body: some View {
     return VStack {
+      Spacer(minLength: 5)
       ForEach(comments) { comment in
           CommentCell(comment: comment)
       }
     }
+    .padding(.leading, 5)
   }
 }
