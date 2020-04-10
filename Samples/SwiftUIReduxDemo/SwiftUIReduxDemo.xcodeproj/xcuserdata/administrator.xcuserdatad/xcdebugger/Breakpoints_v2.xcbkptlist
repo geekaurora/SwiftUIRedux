@@ -46,8 +46,8 @@
             filePath = "SwiftUIReduxDemo/UI Layer/NotificationList/NotificationDetailsState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "reduce(action:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "SwiftUIReduxDemo/UI Layer/FeedList/FeedDetailsState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
             landmarkName = "init(feed:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "SwiftUIReduxDemo/UI Layer/FeedList/FeedListState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "reduce(action:)"
             landmarkType = "7">
          </BreakpointContent>

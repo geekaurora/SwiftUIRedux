@@ -7,7 +7,7 @@ public class FeedListState: ReduxSubscriber, ObservableObject {
   
   @Published var feeds: [Feed] = []
     
-  public override init() {
+  public required init() {
     super.init()    
     Services.shared.fetchFeeds(endPoint: Self.feedEndpoint) { feeds in
       dispatch(action: FetchFeedsResultAction(feeds: feeds, error: nil))
@@ -15,7 +15,6 @@ public class FeedListState: ReduxSubscriber, ObservableObject {
   }
   
   public override func reduce(action: ReduxActionProtocol) {
-    
     switch action {
     case let fetchFeedsResultAction as FetchFeedsResultAction:
       // Action with fetch feeds results.
@@ -28,7 +27,5 @@ public class FeedListState: ReduxSubscriber, ObservableObject {
       // No need of deep copy, SwiftUI decides wether to reload by List diff.
       feeds = feeds.map { $0.reduce(action: action) }
     }
-
   }
-  
 }
