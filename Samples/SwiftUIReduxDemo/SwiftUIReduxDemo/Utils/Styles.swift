@@ -30,7 +30,6 @@ struct NormalButtonStyle: ViewModifier {
   func body(content: Content) -> some View {
     content
       .buttonStyle(BorderlessButtonStyle())
-      //.foregroundColor(.blue)
   }
 }
 

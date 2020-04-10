@@ -21,7 +21,6 @@ struct CommentCell: View {
       .modifier(NormalButtonStyle())
     }
   }
-  
 }
 
 struct CommentListView: View {
@@ -33,7 +32,6 @@ struct CommentListView: View {
       ForEach(comments, id: \.diffId) { comment in
           CommentCell(comment: comment)
       }
-    }
-    .padding(.leading, 5)
+    }.padding(.leading, 5)
   }
 }

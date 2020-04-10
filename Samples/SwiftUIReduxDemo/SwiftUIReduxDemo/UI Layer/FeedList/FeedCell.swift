@@ -12,7 +12,6 @@ struct FeedCell: View {
         // Title text
         Text(feed.title)
           .modifier(ContentTextStyle())
-        
         Spacer()
         
         // Comment button
@@ -37,5 +36,4 @@ struct FeedCell: View {
       Spacer()
     }
   }
-  
 }

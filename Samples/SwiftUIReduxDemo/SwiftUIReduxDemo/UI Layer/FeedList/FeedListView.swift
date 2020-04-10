@@ -15,12 +15,5 @@ struct FeedListView: View {
         }
       }
     }
-    
-  }
-}
-
-struct FeedListView_Previews: PreviewProvider {
-  static var previews: some View {
-    FeedListView()
   }
 }

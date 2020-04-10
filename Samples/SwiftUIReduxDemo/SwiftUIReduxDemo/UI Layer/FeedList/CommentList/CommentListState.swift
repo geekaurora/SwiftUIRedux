@@ -10,5 +10,4 @@ public class CommentListState: ReduxSubscriber, ObservableObject {
     // No need of deep copy, SwiftUI decides wether to reload by List diff.
     comments = comments.map { $0.reduce(action: action) }
   }
-  
 }

@@ -30,9 +30,3 @@ struct NotificationListView: View {
     }
   }
 }
-
-struct NotificationListView_Previews: PreviewProvider {
-  static var previews: some View {
-    NotificationListView()
-  }
-}

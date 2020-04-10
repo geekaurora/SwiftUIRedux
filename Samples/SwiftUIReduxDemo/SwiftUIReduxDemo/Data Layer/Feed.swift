@@ -1,6 +1,6 @@
+import CZUtils
 import SwiftUIKit
 import SwiftUIRedux
-import CZUtils
 
 public struct Feed: ListDiffable, Codable, Equatable, CustomStringConvertible {
   static var mocks = (0..<10).map {
@@ -45,7 +45,7 @@ extension Feed: ReduxStateProtocol {
     
     switch action {
     case let action as FeedLikeAction:
-      // Update corresponding feed `isLiked`, and then reload UI by set `self.feeds`.
+      // Updates the corresponding `isLiked` of feed.
       if feedId == action.feed.feedId {
         newFeed.isLiked = !action.feed.isLiked
       }

@@ -27,11 +27,9 @@ public struct Notification: ListDiffable, Codable, Equatable, CustomStringConver
   public static func == (lhs: Notification, rhs: Notification) -> Bool {
     lhs.isEqual(toCodable: rhs)
   }
-  
 }
 
 extension Notification: ReduxStateProtocol {
-  
   @discardableResult
   public func reduce(action: ReduxActionProtocol) -> Self {
     var newNotification = self

@@ -9,5 +9,4 @@ class NotificationListState: ReduxSubscriber, ObservableObject {
   public override func reduce(action: ReduxActionProtocol) {
     notifications = notifications.map { $0.reduce(action: action) }
   }
-  
 }
