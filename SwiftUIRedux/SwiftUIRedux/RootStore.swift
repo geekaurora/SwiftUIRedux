@@ -1,25 +1,26 @@
 import CZUtils
 import SwiftUIKit
 
-/// Convenience method to dispatch `action` to subscribers of `ReduxRootStore.shared`.
+/// Convenience method to dispatch `action` to subscribers of shared `ReduxRootStore`.
 public func dispatch(action: ReduxActionProtocol) {
   ReduxRootStore.shared.dispatch(action: action)
 }
 
-/// Root store of the app that is responsible to notify subscribers.
+/// Root store of Redux that is responsible to notify subscribers.
 ///
 /// - Note:
 /// Dispatcher only holds weak reference to subscribers, no need to explicitly call `unsubscribe()` when deinit.
 public class ReduxRootStore {
 
-  public static var shared = ReduxRootStore()
+  public static let shared = ReduxRootStore()
 
   private var subscribers = NSHashTable<AnyObject>.weakObjects()
 
   // MARK: - Dispatch
   
   public func dispatch(action: ReduxActionProtocol) {
-    // Notify all subscribers. Note that subscribers can filter action and choose whether to respond.
+    // Notify all subscribers with `action`. Note that subscribers can
+    // filter action and choose how to `reduce(action:)`.
     subscribers.allObjects
       .compactMap { ($0 as? ReduxSubscriberObject).assertIfNil }
       .forEach { $0.reduce(action: action) }
