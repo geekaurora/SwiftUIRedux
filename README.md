@@ -26,5 +26,5 @@
   * Efficient tree diff algorithm, no more imperative manual update code. 
 
 
-  <img src="./Docs/Redux.jpeg">
+  <img src="./Docs/Redux.jpeg" width="600">
 
