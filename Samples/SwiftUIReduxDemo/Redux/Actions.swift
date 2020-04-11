@@ -3,6 +3,8 @@ import SwiftUIRedux
 
 // MARK: - Feed
 
+public class FeedAction: ReduxActionProtocol {}
+
 struct FeedLikeAction: ReduxActionProtocol {
   let feed: Feed
 }

@@ -3,6 +3,8 @@ import SwiftUIRedux
 import CZUtils
 
 public class FeedListState: ReduxSubscriber, ObservableObject {
+  public typealias ActionType = FeedAction
+
   /// Fake endpoint to fetch feeds.
   static let feedEndpoint = "http://instagram.com/feeds"
   

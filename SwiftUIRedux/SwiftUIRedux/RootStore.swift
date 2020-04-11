@@ -36,16 +36,16 @@ public class ReduxRootStore {
   
   // MARK: - Subscribe
   
-  public func subscribe(_ subscriber: ReduxSubscriberProtocol) {
+  public func subscribe<T: ReduxSubscriberProtocol>(_ subscriber: T) {
     guard !contains(subscriber) else { return }
     subscribers.add(subscriber)
   }
   
-  public func unsubscribe(_ subscriber: ReduxSubscriberProtocol) {
+  public func unsubscribe<T: ReduxSubscriberProtocol>(_ subscriber: T) {
     subscribers.remove(subscriber)
   }
   
-  public func contains(_ subscriber: ReduxSubscriberProtocol) -> Bool {
+  public func contains<T: ReduxSubscriberProtocol>(_ subscriber: T) -> Bool {
     return subscribers.contains(subscriber)
   }
 }
