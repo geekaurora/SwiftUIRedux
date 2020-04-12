@@ -3,7 +3,7 @@ import SwiftUIRedux
 import CZUtils
 
 public struct Notification: ListDiffable, Codable, Equatable, CustomStringConvertible {
-  static var mocks = (0..<10).map {
+  static let mocks = (0..<10).map {
     Notification(title: "Notification\($0)", feed: Feed(feedId: $0, title: "feed\($0)"))
   }
 
@@ -29,9 +29,12 @@ public struct Notification: ListDiffable, Codable, Equatable, CustomStringConver
   }
 }
 
+// MARK: - ReduxStateProtocol
+
 extension Notification: ReduxStateProtocol {
   @discardableResult
   public func reduce(action: ReduxActionProtocol) -> Self {
+    // Note: deep copy of `self`.
     var newNotification = self
     newNotification.feed = feed.reduce(action: action)
     return newNotification

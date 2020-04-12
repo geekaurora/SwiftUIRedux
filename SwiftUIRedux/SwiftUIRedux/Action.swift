@@ -1,4 +1,4 @@
-import SwiftUIKit
+import Foundation
 
 /// Protocol that defines Redux Action.
 public protocol ReduxActionProtocol {}

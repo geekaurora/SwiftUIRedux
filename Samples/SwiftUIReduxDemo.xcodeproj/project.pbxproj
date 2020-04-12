@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C35DC5252442EC84001567CC /* SwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = C35DC5242442EC84001567CC /* SwiftUIKit */; };
 		C3672BEB243EE92C0050689B /* CommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3672BE9243EE92C0050689B /* CommentListView.swift */; };
 		C3672BEC243EE92C0050689B /* CommentListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3672BEA243EE92C0050689B /* CommentListState.swift */; };
 		C3672BEE243EE9940050689B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3672BED243EE9940050689B /* Comment.swift */; };
@@ -19,8 +20,6 @@
 		C37B6001243B619600F69EC1 /* FeedListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37B6000243B619600F69EC1 /* FeedListState.swift */; };
 		C37B6006243B623D00F69EC1 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37B6005243B623D00F69EC1 /* TabsView.swift */; };
 		C37B600F243B64DD00F69EC1 /* CZUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C37B600D243B64DD00F69EC1 /* CZUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C37B6013243B64DF00F69EC1 /* SwiftUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C37B6011243B64DF00F69EC1 /* SwiftUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C38E36B22440877700202F20 /* SwiftUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38E36B12440877700202F20 /* SwiftUIKit.framework */; };
 		C38E36B42440877A00202F20 /* CZUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38E36B32440877A00202F20 /* CZUtils.framework */; };
 		C397F685243C816A003DF1CE /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F684243C816A003DF1CE /* Styles.swift */; };
 		C397F696243CAA8F003DF1CE /* FeedDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397F695243CAA8F003DF1CE /* FeedDetailsView.swift */; };
@@ -86,7 +85,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C37B600F243B64DD00F69EC1 /* CZUtils.framework in Embed Frameworks */,
-				C37B6013243B64DF00F69EC1 /* SwiftUIKit.framework in Embed Frameworks */,
 				C3AB571524409C3A002C5A3A /* SwiftUIRedux.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -139,7 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C38E36B42440877A00202F20 /* CZUtils.framework in Frameworks */,
-				C38E36B22440877700202F20 /* SwiftUIKit.framework in Frameworks */,
+				C35DC5252442EC84001567CC /* SwiftUIKit in Frameworks */,
 				C3AB571424409C3A002C5A3A /* SwiftUIRedux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +349,7 @@
 			);
 			name = SwiftUIReduxDemo;
 			packageProductDependencies = (
+				C35DC5242442EC84001567CC /* SwiftUIKit */,
 			);
 			productName = SwiftUIReduxDemo;
 			productReference = C3C9F6B9243B3BF5005ED324 /* SwiftUIReduxDemo.app */;
@@ -425,6 +424,7 @@
 			);
 			mainGroup = C3C9F6B0243B3BF5005ED324;
 			packageReferences = (
+				C35DC5232442EC84001567CC /* XCRemoteSwiftPackageReference "SwiftUIKit" */,
 			);
 			productRefGroup = C3C9F6BA243B3BF5005ED324 /* Products */;
 			projectDirPath = "";
@@ -841,6 +841,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C35DC5232442EC84001567CC /* XCRemoteSwiftPackageReference "SwiftUIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/geekaurora/SwiftUIKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C35DC5242442EC84001567CC /* SwiftUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C35DC5232442EC84001567CC /* XCRemoteSwiftPackageReference "SwiftUIKit" */;
+			productName = SwiftUIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3C9F6B1243B3BF5005ED324 /* Project object */;
 }

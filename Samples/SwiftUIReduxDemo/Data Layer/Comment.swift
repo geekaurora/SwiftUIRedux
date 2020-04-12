@@ -25,9 +25,12 @@ public struct Comment: ListDiffable, Codable, Equatable, CustomStringConvertible
   }
 }
 
+// MARK: - ReduxStateProtocol
+
 extension Comment: ReduxStateProtocol {
   @discardableResult
   public func reduce(action: ReduxActionProtocol) -> Self {
+    // Note: deep copy of `self`.
     var newComment = self
     
     switch action {

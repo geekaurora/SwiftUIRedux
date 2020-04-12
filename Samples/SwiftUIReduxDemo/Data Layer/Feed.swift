@@ -3,7 +3,7 @@ import SwiftUIKit
 import SwiftUIRedux
 
 public struct Feed: ListDiffable, Codable, Equatable, CustomStringConvertible {
-  static var mocks = (0..<10).map {
+  static let mocks = (0..<10).map {
     Feed(feedId: $0, title: "feed\($0)")
   }
     
@@ -36,6 +36,8 @@ public struct Feed: ListDiffable, Codable, Equatable, CustomStringConvertible {
   }
 }
 
+// MARK: - ReduxStateProtocol
+
 extension Feed: ReduxStateProtocol {
   @discardableResult
   public func reduce(action: ReduxActionProtocol) -> Self {
@@ -45,7 +47,7 @@ extension Feed: ReduxStateProtocol {
     
     switch action {
     case let action as FeedLikeAction:
-      // Updates the corresponding `isLiked` of feed.
+      // Reduces the `FeedLikeAction`.
       if feedId == action.feed.feedId {
         newFeed.isLiked = !action.feed.isLiked
       }

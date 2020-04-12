@@ -3,7 +3,7 @@ import SwiftUIKit
 import SwiftUIRedux
 import CZUtils
 
-class FeedDetailsState: ReduxSubscriber, ObservableObject {
+class FeedDetailsState: ReduxReducer, ObservableObject {
   @Published var feed: Feed
   
   override init() { fatalError("init() has not been implemented") }
@@ -11,6 +11,8 @@ class FeedDetailsState: ReduxSubscriber, ObservableObject {
   init(feed: Feed) {
     self.feed = feed
   }
+  
+  // MARK: - ReduxReducerProtocol
   
   public override func reduce(action: ReduxActionProtocol) {
     self.feed = feed.reduce(action: action)

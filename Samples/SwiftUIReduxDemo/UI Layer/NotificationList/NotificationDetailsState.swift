@@ -3,7 +3,7 @@ import SwiftUIKit
 import SwiftUIRedux
 import CZUtils
 
-class NotificationDetailsState: ReduxSubscriber, ObservableObject {
+class NotificationDetailsState: ReduxReducer, ObservableObject {
   @Published var notification: Notification
   
   override init() { fatalError("init() has not been implemented") }
@@ -13,6 +13,8 @@ class NotificationDetailsState: ReduxSubscriber, ObservableObject {
     super.init()
   }
     
+  // MARK: - ReduxReducerProtocol
+  
   public override func reduce(action: ReduxActionProtocol) {
     self.notification = notification.codableCopy().reduce(action: action)
   }

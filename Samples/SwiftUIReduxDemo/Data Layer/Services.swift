@@ -1,7 +1,6 @@
 import Foundation
 
 class Services {
-  
   static let shared = Services()
   
   func fetchFeeds(endPoint: String,

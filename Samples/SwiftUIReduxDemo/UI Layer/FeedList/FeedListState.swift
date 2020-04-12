@@ -2,18 +2,19 @@ import SwiftUI
 import SwiftUIRedux
 import CZUtils
 
-public class FeedListState: ReduxSubscriber, ObservableObject {
-  /// Fake endpoint to fetch feeds.
+public class FeedListState: ReduxReducer, ObservableObject {
   static let feedEndpoint = "http://instagram.com/feeds"
   
   @Published var feeds: [Feed] = []
     
   public override init() {
-    super.init()    
+    super.init()
     Services.shared.fetchFeeds(endPoint: Self.feedEndpoint) { feeds in
       dispatch(action: FetchFeedsResultAction(feeds: feeds, error: nil))
     }
   }
+  
+  // MARK: - ReduxReducerProtocol
   
   public override func reduce(action: ReduxActionProtocol) {
     switch action {
@@ -25,7 +26,9 @@ public class FeedListState: ReduxSubscriber, ObservableObject {
       }
       self.feeds = feeds
     default:
-      // No need of deep copy, SwiftUI decides wether to reload by List diff.
+      // Propagates `action` to substate tree.
+      // Setting `self.feeds` with new feeds triggers list UI reloading
+      // and SwiftUI will diff efficiently based on list identifier.
       feeds = feeds.map { $0.reduce(action: action) }
     }
   }

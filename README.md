@@ -12,7 +12,7 @@
 ### Unidirectional Data Flow
  * **RootStore/Dispatcher:** Propagates domained actions 
 
- * **Subscriber:** Subscribes to `RootStore` and updates Components with new `State`
+ * **Reducer:** Subscribes to `RootStore` and reduces `Action` to generate new state
 
  * **Action:** Action driven - more loosely coupled pattern than `Delegation` pattern
     
@@ -47,7 +47,7 @@ struct FeedListView: View {
 ***FeedListState***
 
 ```swift
-public class FeedListState: ReduxSubscriber, ObservableObject {  
+public class FeedListState: ReduxReducer, ObservableObject {  
   @Published var feeds: [Feed] = []
   
   public override func reduce(action: ReduxActionProtocol) {
