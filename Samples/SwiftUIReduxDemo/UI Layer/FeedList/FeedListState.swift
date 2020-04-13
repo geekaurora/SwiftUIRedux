@@ -7,7 +7,7 @@ public class FeedListState: ReduxReducer, ObservableObject {
   
   @Published var feeds: [Feed] = []
     
-  public override init() {
+  public required init() {
     super.init()
     Services.shared.fetchFeeds(endPoint: Self.feedEndpoint) { feeds in
       dispatch(action: FetchFeedsResultAction(feeds: feeds, error: nil))

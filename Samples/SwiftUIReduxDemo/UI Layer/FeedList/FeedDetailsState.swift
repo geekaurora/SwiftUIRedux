@@ -6,10 +6,11 @@ import CZUtils
 class FeedDetailsState: ReduxReducer, ObservableObject {
   @Published var feed: Feed
   
-  override init() { fatalError("init() has not been implemented") }
+  required init() { fatalError("init() has not been implemented") }
 
   init(feed: Feed) {
     self.feed = feed
+    super.init()
   }
   
   // MARK: - ReduxReducerProtocol

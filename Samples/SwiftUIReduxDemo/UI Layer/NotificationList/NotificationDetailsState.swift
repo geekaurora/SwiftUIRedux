@@ -6,7 +6,7 @@ import CZUtils
 class NotificationDetailsState: ReduxReducer, ObservableObject {
   @Published var notification: Notification
   
-  override init() { fatalError("init() has not been implemented") }
+  required init() { fatalError("init() has not been implemented") }
 
   init(notification: Notification) {
     self.notification = notification

@@ -17,7 +17,8 @@ public protocol ReduxReducerProtocol: class {
 /// when deinit.
 open class ReduxReducer: ReduxReducerProtocol {
   
-   public init() {    
+  /// Required initializer of ReduxReducer, make sure to call `super.init()` in subclass.
+  public required init() {
     // Subscribes to the root store, will unsubscribe itself automatically when deinit.
     ReduxRootStore.shared.subscribe(self)
   }
