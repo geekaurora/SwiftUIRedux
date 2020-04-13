@@ -1,8 +1,6 @@
 import SwiftUI
 
 /**
- https://stackoverflow.com/questions/56496638/activity-indicator-in-swiftui
- 
  ### Usage
  
  struct ContentView: View {
@@ -37,12 +35,7 @@ public struct LoadingView<Content>: View where Content: View {
   
   @Binding
   public var isShowing: Bool
-  public var content: ContentBlock
-  
-//  public init(isShowing: Bool, content: @escaping () -> Content) {
-//    self.content = content
-//    self.isShowing = isShowing
-//  }
+  public var content: ContentBlock  
     
   public var body: some View {
     GeometryReader { geometry in

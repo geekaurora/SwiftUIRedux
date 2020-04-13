@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C35DC5252442EC84001567CC /* SwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = C35DC5242442EC84001567CC /* SwiftUIKit */; };
+		C319471424448BA9003F5E81 /* SwiftUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C319471324448BA9003F5E81 /* SwiftUIKit.framework */; };
 		C3672BEB243EE92C0050689B /* CommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3672BE9243EE92C0050689B /* CommentListView.swift */; };
 		C3672BEC243EE92C0050689B /* CommentListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3672BEA243EE92C0050689B /* CommentListState.swift */; };
 		C3672BEE243EE9940050689B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3672BED243EE9940050689B /* Comment.swift */; };
@@ -93,6 +93,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C319471124448B96003F5E81 /* SwiftUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C319471324448BA9003F5E81 /* SwiftUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3672BE9243EE92C0050689B /* CommentListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListView.swift; sourceTree = "<group>"; };
 		C3672BEA243EE92C0050689B /* CommentListState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListState.swift; sourceTree = "<group>"; };
 		C3672BED243EE9940050689B /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -136,8 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C319471424448BA9003F5E81 /* SwiftUIKit.framework in Frameworks */,
 				C38E36B42440877A00202F20 /* CZUtils.framework in Frameworks */,
-				C35DC5252442EC84001567CC /* SwiftUIKit in Frameworks */,
 				C3AB571424409C3A002C5A3A /* SwiftUIRedux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +207,8 @@
 		C37B600C243B64DD00F69EC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C319471324448BA9003F5E81 /* SwiftUIKit.framework */,
+				C319471124448B96003F5E81 /* SwiftUIKit.framework */,
 				C38E36B32440877A00202F20 /* CZUtils.framework */,
 				C38E36B12440877700202F20 /* SwiftUIKit.framework */,
 				C37B6011243B64DF00F69EC1 /* SwiftUIKit.framework */,
@@ -349,7 +353,6 @@
 			);
 			name = SwiftUIReduxDemo;
 			packageProductDependencies = (
-				C35DC5242442EC84001567CC /* SwiftUIKit */,
 			);
 			productName = SwiftUIReduxDemo;
 			productReference = C3C9F6B9243B3BF5005ED324 /* SwiftUIReduxDemo.app */;
@@ -424,7 +427,6 @@
 			);
 			mainGroup = C3C9F6B0243B3BF5005ED324;
 			packageReferences = (
-				C35DC5232442EC84001567CC /* XCRemoteSwiftPackageReference "SwiftUIKit" */,
 			);
 			productRefGroup = C3C9F6BA243B3BF5005ED324 /* Products */;
 			projectDirPath = "";
@@ -841,25 +843,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C35DC5232442EC84001567CC /* XCRemoteSwiftPackageReference "SwiftUIKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/geekaurora/SwiftUIKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C35DC5242442EC84001567CC /* SwiftUIKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C35DC5232442EC84001567CC /* XCRemoteSwiftPackageReference "SwiftUIKit" */;
-			productName = SwiftUIKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3C9F6B1243B3BF5005ED324 /* Project object */;
 }

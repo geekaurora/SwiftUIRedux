@@ -2,7 +2,7 @@ import Foundation
 
 /// Protocol that defines Redux State.
 public protocol ReduxStateProtocol {
-  /// Reduce function that generates new State of self with the input `action`.
+  /// Reduce pure function that generates new State of self with the input `action`.
   /// i.e. (oldState, action) => newState
   ///
   /// - Note:
