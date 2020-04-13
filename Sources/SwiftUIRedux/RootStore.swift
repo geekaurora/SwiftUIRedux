@@ -1,3 +1,4 @@
+import Foundation
 import CZUtils
 
 /// Convenience method to dispatch `action` to reducers of shared `ReduxRootStore`.

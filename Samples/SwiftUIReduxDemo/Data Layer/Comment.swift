@@ -1,3 +1,4 @@
+import Foundation
 import SwiftUIKit
 import SwiftUIRedux
 import CZUtils

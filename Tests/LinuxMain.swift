@@ -1,7 +1,7 @@
 import XCTest
 
-import CZUtilsTests
+import SwiftUIReduxTests
 
 var tests = [XCTestCaseEntry]()
-tests += CZUtilsTests.allTests()
+tests += SwiftUIReduxTests.allTests()
 XCTMain(tests)
