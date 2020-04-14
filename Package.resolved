@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CZUtils",
+        "repositoryURL": "https://github.com/geekaurora/CZUtils.git",
+        "state": {
+          "branch": null,
+          "revision": "e97bcea6a3028b5db9afa4b14f219c6e793a2934",
+          "version": "3.0.9"
+        }
+      },
+      {
+        "package": "SwiftUIKit",
+        "repositoryURL": "https://github.com/geekaurora/SwiftUIKit.git",
+        "state": {
+          "branch": null,
+          "revision": "5216488449aeeeb1124d8de63777099e62373529",
+          "version": "1.0.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
