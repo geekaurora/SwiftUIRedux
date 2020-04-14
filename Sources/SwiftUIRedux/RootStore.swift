@@ -14,7 +14,8 @@ public class ReduxRootStore {
   
   public static let shared = ReduxRootStore()
   
-  private var reducers = NSHashTable<AnyObject>.weakObjects()
+  /// Thead-safe HashTable that only holds weak reference to containing items.
+  private var reducers = ThreadSafeHashTable<AnyObject>()
   
   // MARK: - Dispatch
   
@@ -23,21 +24,21 @@ public class ReduxRootStore {
   ///
   /// - Parameter action: The action to be dispatched to reducers.
   public func dispatch(action: ReduxActionProtocol) {
-    reducers.allObjects
-      .compactMap { ($0 as? ReduxReducerProtocol).assertIfNil }
-      .forEach { reducer in
-        if Thread.isMainThread {
-          reducer.reduce(action: action)
-        } else {
-          DispatchQueue.main.async {
+      reducers.allObjects
+        .compactMap { ($0 as? ReduxReducerProtocol).assertIfNil }
+        .forEach { reducer in
+          if Thread.isMainThread {
             reducer.reduce(action: action)
+          } else {
+            DispatchQueue.main.async {
+              reducer.reduce(action: action)
+            }
           }
-        }
     }
   }
   
   // MARK: - Subscribe
-    
+  
   /// Subscribes `reducer` to root store, root store will dispatch `ReduxAction` to `reducer`.
   ///
   /// - Parameter reducer: The reducer to be subscribed to root store.
