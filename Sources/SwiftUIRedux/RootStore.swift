@@ -15,7 +15,7 @@ public class ReduxRootStore {
   public static let shared = ReduxRootStore()
   
   /// Thead-safe HashTable that only holds weak reference to containing items.
-  private var reducers = ThreadSafeHashTable<AnyObject>()
+  private(set) var reducers = ThreadSafeWeakArray<ReduxReducerProtocol>()
   
   // MARK: - Dispatch
   
@@ -24,16 +24,15 @@ public class ReduxRootStore {
   ///
   /// - Parameter action: The action to be dispatched to reducers.
   public func dispatch(action: ReduxActionProtocol) {
-      reducers.allObjects
-        .compactMap { ($0 as? ReduxReducerProtocol).assertIfNil }
-        .forEach { reducer in
-          if Thread.isMainThread {
+    reducers.allObjects
+      .forEach { reducer in
+        if Thread.isMainThread {
+          reducer.reduce(action: action)
+        } else {
+          DispatchQueue.main.async {
             reducer.reduce(action: action)
-          } else {
-            DispatchQueue.main.async {
-              reducer.reduce(action: action)
-            }
           }
+        }
     }
   }
   
@@ -44,7 +43,7 @@ public class ReduxRootStore {
   /// - Parameter reducer: The reducer to be subscribed to root store.
   public func subscribe(_ reducer: ReduxReducerProtocol) {
     guard !contains(reducer) else { return }
-    reducers.add(reducer)
+    reducers.append(reducer)
   }
   
   /// Unsubscribes `reducer` to root store, root store will stop dispatching `ReduxAction` to `reducer`.
@@ -58,7 +57,7 @@ public class ReduxRootStore {
   ///
   /// - Parameter reducer: The reducer to be checked.
   /// - Returns: Whether root store contains the specified `reducer`.
-  private func contains(_ reducer: ReduxReducerProtocol) -> Bool {
+  public func contains(_ reducer: ReduxReducerProtocol) -> Bool {
     return reducers.contains(reducer)
   }
 }
