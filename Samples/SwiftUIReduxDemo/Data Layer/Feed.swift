@@ -7,15 +7,11 @@ public struct Feed: ListDiffable, Codable, Equatable, CustomStringConvertible {
   static let mocks = (0..<10).map {
     Feed(feedId: $0, title: "feed\($0)")
   }
-    
-  public var diffId = UUID()
+  
   public let feedId: Int
   public let title: String
-  public var isLiked: Bool { didSet { updateDiffId() } }
-  
-  public var comments: [Comment] = [] {
-    didSet { updateDiffId() }
-  }
+  public var isLiked: Bool
+  public var comments: [Comment] = []
   
   public init(feedId: Int, title: String, isLiked: Bool = false) {
     self.feedId = feedId
