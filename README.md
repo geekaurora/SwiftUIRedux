@@ -6,7 +6,7 @@
 
 ### Comprehensive Redux library for SwiftUI.
 
- * Keep `State` consistent across `Stores` by `pub/sub` pattern with `Reducers` of `RootStore`.
+ * Keep `State` consistent across `Stores` by type safe `pub/sub` pattern with `Reducers` of `RootStore`.
  * Waterfall `Action` propagation flow from root to `State` subtree.
   
 ### Unidirectional Data Flow
@@ -51,7 +51,7 @@ public class FeedListState: ReduxReducer, ObservableObject {
   @Published var feeds: [Feed] = []
   
   public override func reduce(action: ReduxActionProtocol) {
-    // Propagates `action` to substate tree.
+    // Propagates `action` to the substate tree.
     // Setting `self.feeds` with new feeds triggers list UI reloading 
     // and SwiftUI will diff efficiently based on list identifier.
     feeds = feeds.map { $0.reduce(action: action) }

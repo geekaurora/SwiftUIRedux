@@ -1,6 +1,6 @@
 import Foundation
-import SwiftUIKit
-import SwiftUIRedux
+import SwiftUI
+import SwiftUIKitRedux
 import CZUtils
 
 public struct Comment: ListDiffable, Codable, Equatable, CustomStringConvertible {
