@@ -1,6 +1,5 @@
-import Foundation
-import SwiftUI
-import SwiftUIKitRedux
+import SwiftUIKit
+import SwiftUIRedux
 import CZUtils
 
 public struct Notification: ListDiffable, Codable, Equatable, CustomStringConvertible {

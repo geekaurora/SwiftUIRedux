@@ -1,7 +1,6 @@
-import Foundation
 import CZUtils
-import SwiftUI
-import SwiftUIKitRedux
+import SwiftUIKit
+import SwiftUIRedux
 
 public struct Feed: ListDiffable, Codable, Equatable, CustomStringConvertible {
   static let mocks = (0..<10).map {

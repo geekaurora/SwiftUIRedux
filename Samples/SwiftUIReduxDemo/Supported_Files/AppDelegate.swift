@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  SwiftUIReduxDemo
-//
-//  Created by Cheng Zhang on 4/6/20.
-//  Copyright © 2020 Cheng Zhang. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
