@@ -6,7 +6,7 @@ public protocol ReduxStateProtocol {
   /// i.e. (oldState, action) => newState
   ///
   /// - Note:
-  /// Recommendation is to define conformance as `struct` and return deep copy of self,  e.g. var newSelf = self,
+  /// Recommendation is to define conformance as `struct` and return deep copy of self,  i.e. let newSelf = self,
   /// so avoid duplicate mutations on the same instance if `self` is reference type.
   /// If you have to use reference type, workaround is to return deep copy of `self`.
   ///
