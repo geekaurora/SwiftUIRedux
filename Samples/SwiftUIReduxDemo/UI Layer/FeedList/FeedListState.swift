@@ -3,7 +3,7 @@ import SwiftUIRedux
 import CZUtils
 
 public class FeedListState: ReduxReducer, ObservableObject {
-  static let feedEndpoint = "http://instagram.com/feeds"
+  static let feedEndpoint = "localmock.feeds"
   
   @Published var feeds: [Feed] = []
     
