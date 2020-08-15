@@ -17,7 +17,7 @@ public class ReduxRootStore {
   /// Thead safe array that only holds weak reference to containing items.
   private(set) var reducers = ThreadSafeWeakArray<ReduxReducerProtocol>()
   
-  /// Thead safe middlewares array.
+  /// Thead safe middlewares.
   private(set) var middlewares = ThreadSafeArray<Middleware>()
   
   // MARK: - Dispatch
@@ -27,7 +27,7 @@ public class ReduxRootStore {
   ///
   /// - Parameter action: The action to be dispatched to reducers.
   public func dispatch(action: ReduxActionProtocol) {
-    // Iterate through `middlewares` to retrieve the final `dispatchFunction`.
+    // Iterate through `middlewares` to transform and get the final `dispatchFunction`.
     let dispatchFunction = middlewares
       .allObjects
       .reduce(_dispatch, { prevDispatch, middleware in
@@ -69,9 +69,8 @@ public class ReduxRootStore {
   
   // MARK: - Middlware
   
-  /// Append `middleware` to middlewares that transform dispatch function.
-  /// `middleware` is useful to decorate functionality of Dispatch function.
-  /// e.g. middleware to log all dispatched actions etc.
+  /// Append `middleware` to `middlewares` that transform dispatch function.
+  /// `middleware` is useful to decorate functionality of Dispatch function. e.g. log all dispatched actions, etc.
   public func appendMiddleware(_ middleware: @escaping Middleware) {
     guard !middlewares.contains(middleware) else { return }
     middlewares.append(middleware)

@@ -111,7 +111,6 @@
 		C3C9F6DA243B3BF8005ED324 /* SwiftUIReduxDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIReduxDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9F6DE243B3BF8005ED324 /* SwiftUIReduxDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIReduxDemoUITests.swift; sourceTree = "<group>"; };
 		C3C9F6E0243B3BF8005ED324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3EE32EB24E833750052C95E /* CZUtils */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CZUtils; path = ../../CZUtils; sourceTree = "<group>"; };
 		C3F29C8D2484F56500B7A9B4 /* SwiftUIRedux */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIRedux; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,7 +228,6 @@
 		C3C9F6B0243B3BF5005ED324 = {
 			isa = PBXGroup;
 			children = (
-				C3EE32EB24E833750052C95E /* CZUtils */,
 				C3F29C8D2484F56500B7A9B4 /* SwiftUIRedux */,
 				C3C9F6BB243B3BF5005ED324 /* SwiftUIReduxDemo */,
 				C3C9F6D2243B3BF8005ED324 /* SwiftUIReduxDemoTests */,
