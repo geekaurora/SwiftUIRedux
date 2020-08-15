@@ -14,8 +14,11 @@ public class ReduxRootStore {
   
   public static let shared = ReduxRootStore()
   
-  /// Thead-safe HashTable that only holds weak reference to containing items.
+  /// Thead safe array that only holds weak reference to containing items.
   private(set) var reducers = ThreadSafeWeakArray<ReduxReducerProtocol>()
+  
+  /// Thead safe middlewares array.
+  private(set) var middlewares = ThreadSafeArray<Middleware>()
   
   // MARK: - Dispatch
   
@@ -24,6 +27,17 @@ public class ReduxRootStore {
   ///
   /// - Parameter action: The action to be dispatched to reducers.
   public func dispatch(action: ReduxActionProtocol) {
+    // Iterate through `middlewares` to retrieve the final `dispatchFunction`.
+    let dispatchFunction = middlewares
+      .allObjects
+      .reduce(_dispatch, { prevDispatch, middleware in
+        middleware(prevDispatch)
+      })
+    // Dispatch action.
+    dispatchFunction(action)
+  }
+  
+  private func _dispatch(action: ReduxActionProtocol) {
     reducers.allObjects
       .forEach { reducer in
         if Thread.isMainThread {
@@ -42,7 +56,7 @@ public class ReduxRootStore {
   ///
   /// - Parameter reducer: The reducer to be subscribed to root store.
   public func subscribe(_ reducer: ReduxReducerProtocol) {
-    guard !contains(reducer) else { return }
+    guard !reducers.contains(reducer) else { return }
     reducers.append(reducer)
   }
   
@@ -53,11 +67,13 @@ public class ReduxRootStore {
     reducers.remove(reducer)
   }
   
-  /// Returns whether root store contains the specified `reducer`.
-  ///
-  /// - Parameter reducer: The reducer to be checked.
-  /// - Returns: Whether root store contains the specified `reducer`.
-  public func contains(_ reducer: ReduxReducerProtocol) -> Bool {
-    return reducers.contains(reducer)
+  // MARK: - Middlware
+  
+  /// Append `middleware` to middlewares that transform dispatch function.
+  /// `middleware` is useful to decorate functionality of Dispatch function.
+  /// e.g. middleware to log all dispatched actions etc.
+  public func appendMiddleware(_ middleware: @escaping Middleware) {
+    guard !middlewares.contains(middleware) else { return }
+    middlewares.append(middleware)
   }
 }
