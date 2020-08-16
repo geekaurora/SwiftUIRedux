@@ -9,9 +9,15 @@ public class FeedListState: ReduxReducer, ObservableObject {
     
   public required init() {
     super.init()
-    Services.shared.fetchFeeds(endPoint: Self.feedEndpoint) { feeds in
-      dispatch(action: FetchFeedsResultAction(feeds: feeds, error: nil))
+    // Fetch feeds - dispatch Redux-Thunk async action `fetchFeedsAsyncAction`.
+    let fetchFeedsAsyncAction = ReduxAsyncBlockAction(type: "FetchFeedsAsyncAction") {
+      // Fetch feeds from end point.
+      Services.shared.fetchFeeds(endPoint: Self.feedEndpoint) { feeds in
+        // On fetch completion, dispatch action `FetchFeedsResultAction` to reducers to produce new States.
+        dispatch(action: FetchFeedsResultAction(feeds: feeds, error: nil))
+      }
     }
+    dispatch(action: fetchFeedsAsyncAction)
   }
   
   // MARK: - ReduxReducerProtocol

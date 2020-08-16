@@ -23,6 +23,18 @@ public extension ReduxActionProtocol {
 /// Protocol that defines async Redux Action.
 public protocol ReduxAsyncActionProtocol: ReduxActionProtocol {}
 
+/// Async Redux Action that can be excuted automatically by Thunk Middleware.
+public struct ReduxAsyncBlockAction: ReduxAsyncActionProtocol {
+  public let type: String
+  public let executionBlock: () -> Void
+  public let context: ReduxActionContext?
+  public init(type: String,  executionBlock: @escaping () -> Void, context: ReduxActionContext? = nil) {
+    self.type = type
+    self.executionBlock = executionBlock
+    self.context = context
+  }
+}
+
 // MARK: - ReduxActionContext
 
 /// The context be used to differentiate the source of the action.

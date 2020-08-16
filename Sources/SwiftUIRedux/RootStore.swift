@@ -71,7 +71,7 @@ public class ReduxRootStore {
   
   /// Append `middleware` to `middlewares` that transform dispatch function.
   /// `middleware` is useful to decorate functionality of Dispatch function. e.g. log all dispatched actions, etc.
-  public func appendMiddleware(_ middleware: @escaping Middleware) {
+  public func applyMiddleware(_ middleware: @escaping Middleware) {
     guard !middlewares.contains(middleware) else { return }
     middlewares.append(middleware)
   }
