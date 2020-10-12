@@ -12,7 +12,11 @@ public func dispatch(action: ReduxActionProtocol) {
 /// Root store only holds weak reference to reducers, no need to explicitly call `unsubscribe()` when deinit.
 public class ReduxRootStore {
   
-  public static let shared = ReduxRootStore()
+  public static let shared: ReduxRootStore = {
+    let rootStore = ReduxRootStore()
+    rootStore.applyDefaultMiddlewares()
+    return rootStore
+  }()
   
   /// Thead safe array that only holds weak reference to containing items.
   private(set) var reducers = ThreadSafeWeakArray<ReduxReducerProtocol>(allowDuplicateElements: false)
@@ -69,10 +73,15 @@ public class ReduxRootStore {
   
   // MARK: - Middlware
   
-  /// Append `middleware` to `middlewares` that transform dispatch function.
+  /// Append `middleware` to `middlewares` that transform Dispatch function.
   /// `middleware` is useful to decorate functionality of Dispatch function. e.g. log all dispatched actions, etc.
   public func applyMiddleware(_ middleware: @escaping Middleware) {
     guard !middlewares.contains(middleware) else { return }
     middlewares.append(middleware)
+  }
+
+  /// Apply default middleware to Dispatch function.
+  public func applyDefaultMiddlewares() {
+    applyMiddleware(ActionLogMiddleware)
   }
 }
