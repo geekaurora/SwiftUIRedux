@@ -15,10 +15,10 @@ public class ReduxRootStore {
   public static let shared = ReduxRootStore()
   
   /// Thead safe array that only holds weak reference to containing items.
-  private(set) var reducers = ThreadSafeWeakArray<ReduxReducerProtocol>()
+  private(set) var reducers = ThreadSafeWeakArray<ReduxReducerProtocol>(allowDuplicateElements: false)
   
   /// Thead safe middlewares.
-  private(set) var middlewares = ThreadSafeArray<Middleware>()
+  private(set) var middlewares = ThreadSafeArray<Middleware>(allowDuplicateElements: false)
   
   // MARK: - Dispatch
   
