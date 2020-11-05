@@ -18,6 +18,14 @@ public extension ReduxActionProtocol {
     var context: ReduxActionContext? { return nil }
 }
 
+/// Wrapper that holds the weak reference of `ReduxActionContext`.
+public class ReduxActionContextWrapper {
+  public private(set) weak var context: ReduxActionContext?
+  public init(_ context: ReduxActionContext?) {
+    self.context = context
+  }
+}
+
 // MARK: - ReduxAsyncActionProtocol
 
 /// Protocol that defines async Redux Action.
