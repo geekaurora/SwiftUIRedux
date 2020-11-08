@@ -4,18 +4,11 @@ import Foundation
 
 /// Protocol that defines Redux Action.
 public protocol ReduxActionProtocol {
-  /// The context be used to differentiate the source of the action.
+  /// The wrapper of context be used to differentiate the source of the action.
   /// If multiple States share the same RootStore, you can pass`context` to the corresponding State,
   /// so action can be handled within the domain.
-  var context: ReduxActionContext? { get }
-}
-
-/// Default implementation of `ReduxActionProtocol`.
-public extension ReduxActionProtocol {
-  /// The context be used to differentiate the source of the action.
-  /// If multiple States share the same RootStore, you can pass`context` to the corresponding State,
-  /// so action can be handled within the domain.
-    var context: ReduxActionContext? { return nil }
+  /// If action isn't bound to specific domain, return nil as contextWrapper.
+  var contextWrapper: ReduxActionContextWrapper? { get }
 }
 
 /// Wrapper that holds the weak reference of `ReduxActionContext`.
@@ -35,11 +28,11 @@ public protocol ReduxAsyncActionProtocol: ReduxActionProtocol {}
 public struct ReduxAsyncBlockAction: ReduxAsyncActionProtocol {
   public let type: String
   public let executionBlock: () -> Void
-  public let context: ReduxActionContext?
-  public init(type: String,  executionBlock: @escaping () -> Void, context: ReduxActionContext? = nil) {
+  public let contextWrapper: ReduxActionContextWrapper?
+  public init(type: String,  executionBlock: @escaping () -> Void, contextWrapper: ReduxActionContextWrapper? = nil) {
     self.type = type
     self.executionBlock = executionBlock
-    self.context = context
+    self.contextWrapper = contextWrapper
   }
 }
 
