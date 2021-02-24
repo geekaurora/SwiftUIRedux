@@ -83,6 +83,10 @@ public class ReduxRootStore {
 
   /// Apply default middlewares to Dispatch function.
   public func applyDefaultMiddlewares() {
+    // Apply logging middleware that logs all dispatched actions.
     applyMiddleware(ActionLogMiddleware)
+    
+    // Apply ReduxThunk middleware that executes Async Redux Action automatically.
+    applyMiddleware(ReduxThunkMiddleware)
   }
 }
