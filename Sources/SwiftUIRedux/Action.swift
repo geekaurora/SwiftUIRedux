@@ -11,6 +11,11 @@ public protocol ReduxActionProtocol {
   var contextWrapper: ReduxActionContextWrapper? { get }
 }
 
+/// Extension that implements default conformance of ReduxActionProtocol.
+public extension ReduxActionProtocol {
+  var contextWrapper: ReduxActionContextWrapper? { return nil }
+}
+
 /// Wrapper that holds the weak reference of `ReduxActionContext`.
 public class ReduxActionContextWrapper {
   public private(set) weak var context: ReduxActionContext?
@@ -29,7 +34,9 @@ public struct ReduxAsyncBlockAction: ReduxAsyncActionProtocol {
   public let type: String
   public let executionBlock: () -> Void
   public let contextWrapper: ReduxActionContextWrapper?
-  public init(type: String,  executionBlock: @escaping () -> Void, contextWrapper: ReduxActionContextWrapper? = nil) {
+  public init(type: String,
+              executionBlock: @escaping () -> Void,
+              contextWrapper: ReduxActionContextWrapper? = nil) {
     self.type = type
     self.executionBlock = executionBlock
     self.contextWrapper = contextWrapper
@@ -38,5 +45,5 @@ public struct ReduxAsyncBlockAction: ReduxAsyncActionProtocol {
 
 // MARK: - ReduxActionContext
 
-/// The context be used to differentiate the source of the action.
+/// The context that differentiates the source of the action.
 public protocol ReduxActionContext: class {}

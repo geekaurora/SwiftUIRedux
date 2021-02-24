@@ -9,6 +9,10 @@ public class FeedListState: ReduxReducer, ObservableObject {
     
   public required init() {
     super.init()
+    fetchFeeds()
+  }
+  
+  private func fetchFeeds() {
     // Fetch feeds - dispatch Redux-Thunk async action `fetchFeedsAsyncAction`.
     let fetchFeedsAsyncAction = ReduxAsyncBlockAction(type: "FetchFeedsAsyncAction") {
       // Fetch feeds from end point.
@@ -25,7 +29,7 @@ public class FeedListState: ReduxReducer, ObservableObject {
   public override func reduce(action: ReduxActionProtocol) {
     switch action {
     case let fetchFeedsResultAction as FetchFeedsResultAction:
-      // Action with fetch feeds results.
+      // Handle action with the fetching feeds result.
       guard let feeds = fetchFeedsResultAction.feeds else {
         assertionFailure("Failed to fetch feeds. Error - \(fetchFeedsResultAction.error).")
         return
@@ -33,8 +37,8 @@ public class FeedListState: ReduxReducer, ObservableObject {
       self.feeds = feeds
     default:
       // Propagates `action` to substate tree.
-      // Setting `self.feeds` with new feeds triggers list UI reloading
-      // and SwiftUI will diff efficiently based on list identifier.
+      // Setting `self.feeds` with new feeds triggers List UI reloading
+      // and SwiftUI will diff incrementally based on list identifier.
       feeds = feeds.map { $0.reduce(action: action) }
     }
   }

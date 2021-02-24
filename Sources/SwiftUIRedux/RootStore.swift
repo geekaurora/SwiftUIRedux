@@ -42,7 +42,8 @@ public class ReduxRootStore {
   }
   
   private func _dispatch(action: ReduxActionProtocol) {
-    reducers.allObjects
+    reducers
+      .allObjects
       .forEach { reducer in
         if Thread.isMainThread {
           reducer.reduce(action: action)
@@ -74,13 +75,13 @@ public class ReduxRootStore {
   // MARK: - Middlware
   
   /// Append `middleware` to `middlewares` that transform Dispatch function.
-  /// `middleware` is useful to decorate functionality of Dispatch function. e.g. log all dispatched actions, etc.
+  /// `middleware` is useful to decorate functionality of Dispatch function. e.g. dispatch logging, etc.
   public func applyMiddleware(_ middleware: @escaping Middleware) {
     guard !middlewares.contains(middleware) else { return }
     middlewares.append(middleware)
   }
 
-  /// Apply default middleware to Dispatch function.
+  /// Apply default middlewares to Dispatch function.
   public func applyDefaultMiddlewares() {
     applyMiddleware(ActionLogMiddleware)
   }

@@ -13,22 +13,22 @@ final class TestRootStore: XCTestCase {
   func testSubscribe() {
     let reducer = TestReducer()
     rootStore.subscribe(reducer)
-    XCTAssert(rootStore.contains(reducer))
+    XCTAssert(rootStore.reducers.contains(reducer))
   }
   
   func testUnsubscribe() {
     let reducer = TestReducer()
     rootStore.subscribe(reducer)
-    XCTAssert(rootStore.contains(reducer))
+    XCTAssert(rootStore.reducers.contains(reducer))
     
     rootStore.unsubscribe(reducer)
-    XCTAssert(!rootStore.contains(reducer))
+    XCTAssert(!rootStore.reducers.contains(reducer))
   }
   
   func testDispatchToSingleReducer() {
     let reducer = TestReducer()
     rootStore.subscribe(reducer)
-    XCTAssert(rootStore.contains(reducer))
+    XCTAssert(rootStore.reducers.contains(reducer))
     
     let action = TestAction()
     rootStore.dispatch(action: action)
@@ -39,7 +39,7 @@ final class TestRootStore: XCTestCase {
     let reducers = (0..<100).map { _ in TestReducer() }
     reducers.forEach { rootStore.subscribe($0) }
     reducers.forEach {
-      XCTAssert(rootStore.contains($0), "rootStore doesn't contains reducer - \($0).")
+      XCTAssert(rootStore.reducers.contains($0), "rootStore doesn't contains reducer - \($0).")
     }
     
     let action = TestAction()
@@ -55,7 +55,7 @@ final class TestRootStore: XCTestCase {
     let reducers = (0..<100).map { _ in TestReducer() }
     reducers.forEach { rootStore.subscribe($0) }
     reducers.forEach {
-      XCTAssert(rootStore.contains($0), "rootStore doesn't contains reducer - \($0).")
+      XCTAssert(rootStore.reducers.contains($0), "rootStore doesn't contains reducer - \($0).")
     }
     
     let action = TestAction()
@@ -82,7 +82,7 @@ final class TestRootStore: XCTestCase {
     // Subscribe `reducer` to `rootStore`.
     var reducer: TestReducer? = TestReducer()
     rootStore.subscribe(reducer!)
-    XCTAssert(rootStore.contains(reducer!))
+    XCTAssert(rootStore.reducers.contains(reducer!))
     
     // After release `reducer`, it should be unsubscribed automatically from `rootStore`.
     reducer = nil

@@ -4,10 +4,10 @@ import Foundation
 /// It will receive `ReduxAction` dispatched from the root store after subscribe.
 ///
 /// - Note:
-/// `ReduxReducerProtocol` conformance is normally RootState of RootView for each feature which is equivalant to FeatureControllerViewModel.
+/// `ReduxReducerProtocol` conformer is normally RootState of RootView for each feature which is equivalant to FeatureControllerViewModel.
 ///
 /// Convenient implementation is to subclass `ReduxReducer` to be subscribed to the root store automatically.
-/// If you class implements`ReduxReducerProtocol` manually, be sure to subscibe itself to the root store when init.
+/// If you implement`ReduxReducerProtocol` manually, be sure to subscibe itself to the root store when init.
 public protocol ReduxReducerProtocol: class {
   /// Reduces the `action`. Note that reducer can filter action and choose how to process.
   func reduce(action: ReduxActionProtocol)
