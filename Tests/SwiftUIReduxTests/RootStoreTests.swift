@@ -1,7 +1,7 @@
 import XCTest
 @testable import SwiftUIRedux
 
-final class TestRootStore: XCTestCase {
+final class RootStoreTests: XCTestCase {
   static let total = 300
   static let queueLable = "com.swiftui.redux"
   private var rootStore: ReduxRootStore!

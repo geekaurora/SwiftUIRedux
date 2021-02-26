@@ -19,10 +19,10 @@ public class ReduxRootStore {
   }()
   
   /// Thead safe array that only holds weak reference to containing items.
-  private(set) var reducers = ThreadSafeWeakArray<ReduxReducerProtocol>(allowDuplicateElements: false)
+  private(set) var reducers = ThreadSafeWeakArray<ReduxReducerProtocol>(allowDuplicates: false)
   
   /// Thead safe middlewares.
-  private(set) var middlewares = ThreadSafeArray<Middleware>(allowDuplicateElements: false)
+  private(set) var middlewares = ThreadSafeArray<Middleware>(allowDuplicates: false)
   
   // MARK: - Dispatch
   
@@ -32,8 +32,10 @@ public class ReduxRootStore {
   /// - Parameter action: The action to be dispatched to reducers.
   public func dispatch(action: ReduxActionProtocol) {
     // Iterate through `middlewares` to transform and get the final `dispatchFunction`.
+    // Note: `middlewares` should be reversed, as the last middleware executes first on call stack.
     let dispatchFunction = middlewares
       .allObjects
+      .reversed()
       .reduce(_dispatch, { prevDispatch, middleware in
         middleware(prevDispatch)
       })
@@ -83,10 +85,10 @@ public class ReduxRootStore {
 
   /// Apply default middlewares to Dispatch function.
   public func applyDefaultMiddlewares() {
-    // Apply logging middleware that logs all dispatched actions.
-    applyMiddleware(ActionLogMiddleware)
-    
     // Apply ReduxThunk middleware that executes Async Redux Action automatically.
     applyMiddleware(ReduxThunkMiddleware)
+    
+    // Apply logging middleware that logs all dispatched actions.
+    applyMiddleware(ActionLogMiddleware)
   }
 }
