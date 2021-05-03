@@ -2,13 +2,16 @@ import SwiftUIKit
 import SwiftUIRedux
 import CZUtils
 
-public struct Notification: ListDiffable, Codable, Equatable, CustomStringConvertible {
+public struct Notification: ListDiffCodable, Equatable, CustomStringConvertible {
   static let mocks = (0..<10).map {
     Notification(title: "Notification\($0)", feed: Feed(feedId: $0, title: "feed\($0)"))
   }
   
   public let title: String
   public var feed: Feed
+  public var diffId: String {
+    "\(feed.feedId)"
+  }
   
   public init(title: String, feed: Feed) {
     self.title = title

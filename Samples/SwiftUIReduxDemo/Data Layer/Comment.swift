@@ -2,11 +2,15 @@ import SwiftUIKit
 import SwiftUIRedux
 import CZUtils
 
-public struct Comment: ListDiffable, Codable, Equatable, CustomStringConvertible {
+public struct Comment: ListDiffCodable, Equatable, CustomStringConvertible {
   public var commentId: Int
   public let title: String
   public var isLiked: Bool
-
+  
+  public var diffId: String {
+    "\(commentId)"
+  }
+  
   public init(commentId: Int, title: String, isLiked: Bool = false) {
     self.commentId = commentId
     self.title = title

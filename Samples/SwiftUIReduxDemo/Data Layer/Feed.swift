@@ -1,8 +1,9 @@
+import Foundation
 import CZUtils
 import SwiftUIKit
 import SwiftUIRedux
 
-public struct Feed: ListDiffable, Codable, Equatable, CustomStringConvertible {
+public struct Feed: ListDiffCodable, Equatable, CustomStringConvertible {
   static let mocks = (0..<10).map {
     Feed(feedId: $0, title: "feed\($0)")
   }
@@ -11,6 +12,9 @@ public struct Feed: ListDiffable, Codable, Equatable, CustomStringConvertible {
   public let title: String
   public var isLiked: Bool
   public var comments: [Comment] = []
+  public var diffId: String {
+     "\(feedId)"
+  }
   
   public init(feedId: Int, title: String, isLiked: Bool = false) {
     self.feedId = feedId

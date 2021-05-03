@@ -7,7 +7,9 @@ struct FeedCell: View {
   let feed: Feed
   
   var body: some View {
-    VStack(alignment: .leading) {
+    // dbgPrintWithFunc(self, "Load \(type(of:self)) - diffId = \(feed.diffId)")
+    
+    return VStack(alignment: .leading) {
       HStack {
         // Title text
         Text(feed.title)
