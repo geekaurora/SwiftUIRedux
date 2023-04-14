@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/geekaurora/CZUtils.git",
         "state": {
           "branch": null,
-          "revision": "6bbc90e4eca1cbbb11221668d7c80128e7966bf8",
-          "version": "3.1.2"
+          "revision": "51f2ab4a42918e00f812bcf62a9e14bf785048c7",
+          "version": "3.9.6"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/geekaurora/SwiftUIKit.git",
         "state": {
           "branch": null,
-          "revision": "5216488449aeeeb1124d8de63777099e62373529",
-          "version": "1.0.2"
+          "revision": "d22c588acd8a7a00d5754de765ae7eb7ac64141d",
+          "version": "1.4.3"
         }
       }
     ]

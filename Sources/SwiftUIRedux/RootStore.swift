@@ -19,10 +19,10 @@ public class ReduxRootStore {
   }()
   
   /// Thead safe array that only holds weak reference to containing items.
-  private(set) var reducers = ThreadSafeWeakArray<ReduxReducerProtocol>(allowDuplicateElements: false)
+  private(set) var reducers = ThreadSafeWeakArray<ReduxReducerProtocol>(allowDuplicates: false)
   
   /// Thead safe middlewares.
-  private(set) var middlewares = ThreadSafeArray<Middleware>(allowDuplicateElements: false)
+  private(set) var middlewares = ThreadSafeArray<Middleware>(allowDuplicates: false)
   
   // MARK: - Dispatch
   
