@@ -800,7 +800,7 @@
 			repositoryURL = "https://github.com/geekaurora/CZUtils.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.7;
+				minimumVersion = 4.4.0;
 			};
 		};
 		C374267424460F6B006E8392 /* XCRemoteSwiftPackageReference "SwiftUIKit" */ = {
@@ -808,7 +808,7 @@
 			repositoryURL = "https://github.com/geekaurora/SwiftUIKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.2;
+				minimumVersion = 1.0.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

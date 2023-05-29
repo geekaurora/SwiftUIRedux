@@ -12,8 +12,8 @@ public struct Feed: ListDiffCodable, Equatable, CustomStringConvertible {
   public let title: String
   public var isLiked: Bool
   public var comments: [Comment] = []
-  public var diffId: String {
-     "\(feedId)"
+  public var diffId: Int {
+     feedId
   }
   
   public init(feedId: Int, title: String, isLiked: Bool = false) {

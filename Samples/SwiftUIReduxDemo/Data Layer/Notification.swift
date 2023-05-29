@@ -9,8 +9,8 @@ public struct Notification: ListDiffCodable, Equatable, CustomStringConvertible 
   
   public let title: String
   public var feed: Feed
-  public var diffId: String {
-    "\(feed.feedId)"
+  public var diffId: Int {
+    feed.feedId
   }
   
   public init(title: String, feed: Feed) {

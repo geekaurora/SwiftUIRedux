@@ -7,8 +7,8 @@ public struct Comment: ListDiffCodable, Equatable, CustomStringConvertible {
   public let title: String
   public var isLiked: Bool
   
-  public var diffId: String {
-    "\(commentId)"
+  public var diffId: Int {
+    commentId
   }
   
   public init(commentId: Int, title: String, isLiked: Bool = false) {
