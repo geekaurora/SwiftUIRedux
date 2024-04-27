@@ -12,7 +12,7 @@
 ### Unidirectional Data Flow
  * **RootStore/Dispatcher:** Propagates domained actions 
 
- * **Reducer:** Subscribes to `RootStore` and reduces `Action` to generate new state
+ * **Reducer:** Subscribes to `RootStore` and reduces `Action` to generate new sub state
 
  * **Action:** Action driven - more loosely coupled pattern than `Delegation` pattern
     
